@@ -4,10 +4,18 @@ import {
   CustomButton,
   FAQCard,
   FeatureCard,
+  ProcessCard,
   ReviewCard,
   SectionBox,
+  ServiceCard,
 } from "../components";
-import { clients, faqs, services } from "../constants";
+import {
+  clients,
+  faqs,
+  leftGrantProcess,
+  rightGrantProcess,
+  services,
+} from "../constants";
 import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
 import { shortenText } from "../utils";
 import {
@@ -57,7 +65,7 @@ const LandingPage = () => {
           <img
             src={heroImg}
             alt="Hero Image"
-            className="w-[40rem] sm:w-[60rem] lg:w-[90rem] object-contain"
+            className="w-[50rem] sm:w-[70rem] lg:w-[100rem] object-contain"
           />
         </div>
       </section>
@@ -80,9 +88,9 @@ const LandingPage = () => {
       <ContentImgCard
         id="about-us"
         title="About Us"
-        description={shortenText(
+        description={
           "At Grants4Life, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Grants4life is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
-        )}
+        }
         img={aboutUs}
         imgAlt="About Us"
         buttonText="Learn More"
@@ -97,9 +105,9 @@ const LandingPage = () => {
       <ContentImgCard
         id="our-vision"
         title="Our Vision"
-        description={shortenText(
+        description={
           "At Grants4life, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
-        )}
+        }
         img={ourVision}
         imgAlt="Our Vision"
         buttonText="Learn More"
@@ -108,15 +116,15 @@ const LandingPage = () => {
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
         titleStyles="text-3xl font-bold text-black"
-        cardStyles="gap-10 md:gap-16 md:flex-row-reverse flex-col-reverse bg-white"
+        cardStyles="gap-10 md:gap-16 md:flex-row-reverse bg-white"
         desStyles="text-black"
       />
       <ContentImgCard
         id="our-mission"
         title="Our Mission"
-        description={shortenText(
+        description={
           "Grants4life is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
-        )}
+        }
         img={ourMission}
         imgAlt="Our Mission"
         buttonText="Learn More"
@@ -131,7 +139,7 @@ const LandingPage = () => {
 
       <SectionBox
         title="Our Services"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget felis nec arcu bibendum faucibus. Donec sit amet mauris sit amet nunc vulputate malesuada. Sed eu turpis in justo malesuada vestibulum at sed orci. Cras porta euismod purus, a imperdiet tortor condimentum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        description="At Grants4life, we ensure applicants are funded within 72hrs of application approval. The various grants we provide are as follows:"
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
         titleStyles="text-white"
@@ -139,11 +147,10 @@ const LandingPage = () => {
       >
         <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
           {services.map((feature, index) => (
-            <FeatureCard
+            <ServiceCard
               key={index}
               {...feature}
               cardStyles="bg-white md:w-[31.1%] sm:w-[46.8%]"
-              imgStyles="text-dark_primary"
             />
           ))}
         </div>
@@ -155,15 +162,17 @@ const LandingPage = () => {
         id="our-services"
         cardStyles="gap-20"
       >
-        <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
-          {services.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              {...feature}
-              cardStyles="bg-white md:w-[31.1%] sm:w-[46.8%]"
-              imgStyles="text-dark_primary"
-            />
-          ))}
+        <div className="w-full flex flex-col md:flex-row items-center justify-center gap-5 md:gap-32 md:px-[180px]">
+          <div className="flex flex-col gap-5">
+            {leftGrantProcess.map((feature, index) => (
+              <ProcessCard key={index} {...feature} />
+            ))}
+          </div>
+          <div className="flex flex-col gap-5">
+            {rightGrantProcess.map((feature, index) => (
+              <ProcessCard key={index} {...feature} />
+            ))}
+          </div>
         </div>
       </SectionBox>
 

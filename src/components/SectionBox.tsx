@@ -24,7 +24,7 @@ const SectionBox = ({
   return (
     <section
       id={id}
-      className={`${cardStyles} h-fit  responsive-p flex flex-col max-sm:justify-center {md:items-center}`}
+      className={`${cardStyles} h-fit responsive-p flex flex-col max-sm:justify-center {md:items-center}`}
     >
       <div
         className={`${tdStyles} flex text-center flex-1 leading-relaxed flex-col gap-10 items-center justify-center`}

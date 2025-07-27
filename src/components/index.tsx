@@ -8,3 +8,5 @@ export { default as FAQCard } from "./FAQCard";
 export { default as FeatureCard } from "./FeatureCard";
 export { default as ReviewCard } from "./ReviewCard";
 export { default as SectionBox } from "./SectionBox";
+export { default as ServiceCard } from "./ServiceCard";
+export { default as ProcessCard } from "./ProcessCard";

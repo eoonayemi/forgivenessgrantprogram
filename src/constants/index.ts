@@ -159,32 +159,83 @@ export const features = [
 
 export const services = [
   {
-    name: "Airtime Top-Up",
+    name: "Personal Grants",
     description:
-      "Instantly recharge your mobile with airtime across all networks.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     Icon: Phone,
   },
   {
-    name: "Data Subscription",
+    name: "Business Grants",
     description:
-      "Subscribe to data plans with ease for uninterrupted internet access.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     Icon: Antenna,
   },
   {
-    name: "Utility Bill Payment",
-    description: "Pay your electricity and water bills securely and on time.",
+    name: "Educational Grants",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     Icon: Receipt,
   },
   {
-    name: "Cable TV Subscription",
+    name: "Innovation Grants",
     description:
-      "Renew your GOTV or DSTV subscription quickly and conveniently.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     Icon: Modem,
   },
   {
-    name: "NIN and BVN Verification",
+    name: "Emergency Relief Grants",
     description:
-      "Verify your National Identification Number (NIN), Bank Verification Number (BVN) details and print slips.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     Icon: Id,
+  },
+  {
+    name: "Community Development Grants",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    Icon: Id,
+  },
+];
+
+export const leftGrantProcess = [
+  {
+    step: "First Step",
+    process: "Check Eligibility",
+    description:
+      "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
+  },
+
+  {
+    step: "Third Step",
+    process: "Application Review",
+    cardStyles: "bg-white",
+    processStyles: "text-slate-400",
+    desStyles: "text-slate-400",
+    description:
+      "Our team carefully reviews all submitted applications to ensure they meet our criteria and align with our mission. This process typically takes 12-24 hours. Ensure your application is complete and submitted on time. Our team will reach out if additional information is needed.",
+  },
+
+  {
+    step: "Fifth Step",
+    process: "Funding Disbursement",
+    description:
+      "After all agreements are signed, funds will be disbursed according to the grant’s terms. This process is typically completed within 48 hours of approval.",
+  },
+];
+
+export const rightGrantProcess = [
+  {
+    step: "Second Step",
+    process: "Submit Your Application",
+    cardStyles: "bg-white",
+    processStyles: "text-slate-400",
+    desStyles: "text-slate-400",
+    description:
+      "Complete the online application form with details about yourself, your project or purpose for the grant, and how the funds will be used. Fill out the application form on our website, providing all required information and supporting documents.",
+  },
+  {
+    step: "Fourth Step",
+    process: "Approval and Notification",
+    description:
+      "Once your application is approved, you will receive an official notification with details about the grant amount and terms of use. Review the grant agreement carefully and sign the necessary documents to confirm your acceptance of the grant.",
   },
 ];
