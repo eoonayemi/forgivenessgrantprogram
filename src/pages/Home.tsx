@@ -3,7 +3,6 @@ import {
   ContentImgCard,
   CustomButton,
   FAQCard,
-  FeatureCard,
   ProcessCard,
   ReviewCard,
   SectionBox,
@@ -17,7 +16,6 @@ import {
   services,
 } from "../constants";
 import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
-import { shortenText } from "../utils";
 import {
   Facebook,
   Instagram,
