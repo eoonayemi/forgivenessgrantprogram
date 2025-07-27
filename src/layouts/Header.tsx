@@ -1,4 +1,4 @@
-import { logo } from "../assets/images";
+import { logo } from "../assets/logos";
 import NavBar from "./NavBar";
 
 const Header = () => {
@@ -12,7 +12,6 @@ const Header = () => {
       </div>
       <div>
         <div></div>
-        
       </div>
     </header>
   );

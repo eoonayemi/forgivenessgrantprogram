@@ -7,7 +7,7 @@ import {
   ReviewCard,
   SectionBox,
 } from "../components";
-import { clients, faqs, features, services } from "../constants";
+import { clients, faqs, services } from "../constants";
 import { aboutUs, heroImg } from "../assets/images";
 import { shortenText } from "../utils";
 import {
@@ -107,8 +107,9 @@ const LandingPage = () => {
         hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
-        titleStyles="text-3xl font-bold"
-        cardStyles="gap-10 md:gap-16 md:flex-row-reverse flex-col-reverse"
+        titleStyles="text-3xl font-bold text-black"
+        cardStyles="gap-10 md:gap-16 md:flex-row-reverse flex-col-reverse bg-white"
+        desStyles="text-black"
       />
       <ContentImgCard
         id="our-mission"
