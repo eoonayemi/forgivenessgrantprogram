@@ -8,6 +8,8 @@ import home_video from "./home-video.mp4";
 import customerSupport from "./customer-service-3d.png";
 import auto3d from "./auto-3d.png";
 import reliable3d from "./reliable-3d.png";
+import ourVision from "./our-vision.jpg";
+import ourMission from "./our-mission.jpg";
 
 export {
   about_us_sec2,
@@ -19,5 +21,7 @@ export {
   home_video,
   customerSupport,
   auto3d,
+  ourVision,
+  ourMission,
   reliable3d,
 };

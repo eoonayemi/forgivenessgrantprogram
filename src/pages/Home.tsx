@@ -8,7 +8,7 @@ import {
   SectionBox,
 } from "../components";
 import { clients, faqs, services } from "../constants";
-import { aboutUs, heroImg } from "../assets/images";
+import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
 import { shortenText } from "../utils";
 import {
   Facebook,
@@ -100,7 +100,7 @@ const LandingPage = () => {
         description={shortenText(
           "At Grants4life, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
         )}
-        img={aboutUs}
+        img={ourVision}
         imgAlt="Our Vision"
         buttonText="Learn More"
         btnHasArrow
@@ -117,7 +117,7 @@ const LandingPage = () => {
         description={shortenText(
           "Grants4life is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
         )}
-        img={aboutUs}
+        img={ourMission}
         imgAlt="Our Mission"
         buttonText="Learn More"
         btnHasArrow
