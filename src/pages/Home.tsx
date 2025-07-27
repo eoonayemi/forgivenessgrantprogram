@@ -1,0 +1,248 @@
+import { useEffect, useState } from "react";
+import {
+  ContentImgCard,
+  CustomButton,
+  FAQCard,
+  FeatureCard,
+  ReviewCard,
+  SectionBox,
+} from "../components";
+import { clients, faqs, features, services } from "../constants";
+import { aboutUs, heroImg } from "../assets/images";
+import { shortenText } from "../utils";
+import {
+  Facebook,
+  Instagram,
+  Telegram,
+  Twitter,
+  Whatsapp,
+} from "../assets/icons";
+import { useNavigate } from "react-router-dom";
+
+const LandingPage = () => {
+  const [activeReview, setActiveReview] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveReview((prev) => (prev + 1) % clients.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <main className="mt-16 min-h-full text-[16px]">
+      <section
+        id="home"
+        className="text-white h-fit gap-20 bg-dark_primary responsive-p text-center md:text-left flex flex-col md:flex-row justify-center items-center"
+      >
+        <div className="flex leading-relaxed flex-col gap-10 items-center md:items-start justify-center {self-start}">
+          <h1 className="text-3xl leading-normal sm:text-4xl lg:leading-snug lg:text-5xl font-extrabold">
+            Fueling Dreams for Individuals & Businesses with Accessible Funding
+          </h1>
+          <p>
+            At Grants4life, we fund ambitions and empower futures by offering
+            non-repayment grants to support your goal in education, business or
+            community projects without the burden of debt.
+          </p>
+          <CustomButton
+            text="Get Started"
+            styles="w-[11rem]"
+            hasArrow={true}
+            onClick={() => navigate("/register")}
+          />
+        </div>
+        <div className="bg-secondary001 rounded-full overflow-hidden">
+          <img
+            src={heroImg}
+            alt="Hero Image"
+            className="w-[40rem] sm:w-[60rem] lg:w-[90rem] object-contain"
+          />
+        </div>
+      </section>
+      <section className="text-white bg-light_primary text-center py-5 text-sm md:text-lg font-bold">
+        <p>"Funding ambitions & empowering futures"</p>
+      </section>
+
+      {/* <SectionBox title="Features" id="features">
+        <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 mt-10 items-center justify-center">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              {...feature}
+              cardStyles="md:w-[31.1%] sm:w-[46.8%] bg-[#f5f5f5]"
+            />
+          ))}
+        </div>
+      </SectionBox> */}
+
+      <ContentImgCard
+        id="about-us"
+        title="About Us"
+        description={shortenText(
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl gravida volutpat non a erat. In hac habitasse platea dictumst."
+        )}
+        img={aboutUs}
+        imgAlt="About Us"
+        buttonText="Learn More"
+        btnHasArrow
+        hasButton
+        buttonStyles="w-[10rem] text-[14px]"
+        imgStyles="w-full rounded-3xl"
+        titleStyles="text-3xl font-bold text-black"
+        cardStyles="gap-10 md:gap-16 bg-white"
+        desStyles="text-black"
+      />
+      <ContentImgCard
+        id="our-vision"
+        title="Our Vision"
+        description={shortenText(
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl gravida volutpat non a erat. In hac habitasse platea dictumst."
+        )}
+        img={aboutUs}
+        imgAlt="Our Vision"
+        buttonText="Learn More"
+        btnHasArrow
+        hasButton
+        buttonStyles="w-[10rem] text-[14px]"
+        imgStyles="w-full rounded-3xl"
+        titleStyles="text-3xl font-bold"
+        cardStyles="gap-10 md:gap-16 md:flex-row-reverse flex-col-reverse"
+      />
+      <ContentImgCard
+        id="our-mission"
+        title="Our Mission"
+        description={shortenText(
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in neque et nisl gravida volutpat non a erat. In hac habitasse platea dictumst."
+        )}
+        img={aboutUs}
+        imgAlt="Our Mission"
+        buttonText="Learn More"
+        btnHasArrow
+        hasButton
+        buttonStyles="w-[10rem] text-[14px]"
+        imgStyles="w-full rounded-3xl"
+        titleStyles="text-3xl font-bold text-black"
+        cardStyles="gap-10 md:gap-16 bg-white"
+        desStyles="text-black"
+      />
+
+      <SectionBox
+        title="Our Services"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget felis nec arcu bibendum faucibus. Donec sit amet mauris sit amet nunc vulputate malesuada. Sed eu turpis in justo malesuada vestibulum at sed orci. Cras porta euismod purus, a imperdiet tortor condimentum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        id="our-services"
+        cardStyles="gap-20 bg-dark_primary"
+        titleStyles="text-white"
+        desStyles="text-white"
+      >
+        <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
+          {services.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              {...feature}
+              cardStyles="bg-white md:w-[31.1%] sm:w-[46.8%]"
+              imgStyles="text-dark_primary"
+            />
+          ))}
+        </div>
+      </SectionBox>
+
+      <SectionBox
+        title="Our Process"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget felis nec arcu bibendum faucibus. Donec sit amet mauris sit amet nunc vulputate malesuada. Sed eu turpis in justo malesuada vestibulum at sed orci. Cras porta euismod purus, a imperdiet tortor condimentum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+        id="our-services"
+        cardStyles="gap-20"
+      >
+        <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
+          {services.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              {...feature}
+              cardStyles="bg-white md:w-[31.1%] sm:w-[46.8%]"
+              imgStyles="text-dark_primary"
+            />
+          ))}
+        </div>
+      </SectionBox>
+
+      <SectionBox title="What Our Client Says" id="our-clients">
+        <div className="w-full flex flex-col sm:flex-row sm:justify-center flex-wrap gap-10 mt-14">
+          {clients.map((client, i) => (
+            <ReviewCard
+              key={i}
+              {...client}
+              cardStyles={`md:w-[31.1%] sm:w-[46.8%] transition-all duration-500 bg-light_primary ${
+                activeReview == i
+                  ? "md:scale-[100%]"
+                  : "max-sm:hidden md:scale-[90%]"
+              }`}
+            />
+          ))}
+        </div>
+        <div className="flex flex-row gap-2 items-center justify-center mt-10">
+          {clients.map((_, i) => (
+            <div
+              className={`h-2 w-2 ${
+                activeReview == i ? "bg-dark_primary" : "bg-light_primary"
+              } rounded-full`}
+            ></div>
+          ))}
+        </div>
+      </SectionBox>
+
+      <SectionBox
+        title="Frequently Asked Questions (FAQs)"
+        id="faqs"
+        cardStyles="bg-dark_primary text-white"
+      >
+        <div className="mt-10 flex flex-col gap-[1px] rounded-2xl overflow-hidden">
+          {faqs.map((faq, i) => (
+            <FAQCard key={i} {...faq} arrLen={faqs.length} i={i} />
+          ))}
+        </div>
+      </SectionBox>
+
+      <SectionBox
+        title="Try MyAmtApp Today"
+        description="We offer instant recharge of airtime, databundle, cable TV subscriptions, Electricity bill payments and more."
+        id="try-now"
+        desStyles="w-[50%] text-gray-600"
+        tdStyles="gap-3"
+        cardStyles="text-sm"
+        titleStyles="text-4xl sm:text-5xl md:text-5xl md:leading-[4rem] text-wrap w-[60%] sm:w-[40%] text-center overflow-hidden"
+      >
+        <div className="flex flex-col justify-center items-center mt-5 gap-5">
+          <CustomButton
+            text="Get Started"
+            styles="w-[10rem] text-sm"
+            hasArrow
+            onClick={() => navigate("/register")}
+          />
+          <span className="text-gray-600">Email: myamtapp@info.com</span>
+          <div className="flex gap-5">
+            <span className=" bg-light_primary rounded-full p-2">
+              <Twitter className="text-white text-xs" />
+            </span>
+            <span className=" bg-light_primary rounded-full p-2">
+              <Facebook className="text-white text-xs" />{" "}
+            </span>
+            <span className=" bg-light_primary rounded-full p-2">
+              <Instagram className="text-white text-xs" />
+            </span>
+            <span className=" bg-light_primary rounded-full p-2">
+              <Telegram className="text-white text-xs" />
+            </span>
+            <span className=" bg-light_primary rounded-full p-2">
+              <Whatsapp className="text-white text-xs" />
+            </span>
+          </div>
+        </div>
+      </SectionBox>
+
+      {/* <ArrowUpCircle className="absolute text-white text-4xl right-[3rem]" /> */}
+    </main>
+  );
+};
+
+export default LandingPage;
