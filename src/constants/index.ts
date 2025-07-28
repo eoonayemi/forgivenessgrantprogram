@@ -172,37 +172,37 @@ export const services = [
   {
     name: "Personal Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Get the support you need for everyday life. The Forgiveness Grant Program offers personal grants to help individuals overcome financial barriers and move forward with confidence.",
     Icon: Phone,
   },
   {
     name: "Business Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Whether you're launching a new venture or growing an existing one, our business grants are designed to fuel your ambition without the burden of repayment because progress deserves a helping hand.",
     Icon: Antenna,
   },
   {
     name: "Educational Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Pursue your academic goals without worrying about tuition or fees. The Forgiveness Grant Program provides educational grants to help you invest in your future, debt-free.",
     Icon: Receipt,
   },
   {
     name: "Innovation Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Have a bold idea or breakthrough project? We support creativity that drives change. Our innovative grants are here to help you turn vision into impact. We are ready to fund your dreams.",
     Icon: Modem,
   },
   {
     name: "Emergency Relief Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "In times of crisis, we stand with you. Our emergency relief grants offer fast, compassionate financial help when life takes an unexpected turn.",
     Icon: Id,
   },
   {
-    name: "Community Development Grants",
+    name: "Community Grants",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Build stronger, brighter communities with our support. These grants are for initiatives that uplift neighborhoods, promote inclusion, and create lasting change because everyone deserves a chance to thrive.",
     Icon: Id,
   },
 ];

@@ -23,7 +23,7 @@ const DesktopNav = () => {
             </HashLink>
 
             <span
-              className={`bg-secondary001 ${
+              className={`bg-light_primary ${
                 currentPath == path
                   ? "w-full opacity-100 translate-x-0"
                   : `w-0 opacity-0 translate-x-10`

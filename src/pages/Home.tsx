@@ -139,7 +139,7 @@ const LandingPage = () => {
 
       <SectionBox
         title="Our Services"
-        description="At Grants4life, we ensure applicants are funded within 72hrs of application approval. The various grants we provide are as follows:"
+        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
         titleStyles="text-white"
@@ -175,7 +175,7 @@ const LandingPage = () => {
             <div className="self-center mt-10">
               <CustomButton
                 text="Get Funded"
-                styles="rounded-lg px-6 bg-secondary001"
+                styles="rounded-lg px-6 bg-light_primary"
                 hasArrow
               />
             </div>

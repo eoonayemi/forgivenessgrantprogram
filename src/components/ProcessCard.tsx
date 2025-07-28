@@ -19,7 +19,7 @@ const ProcessCard = ({
     <div
       className={`${cardStyles} h-fit flex flex-col text-left text-white gap-2 p-10 bg-dark_primary shadow-xl rounded-xl w-[20rem]`}
     >
-      <h2 className={`uppercase text-sm font-bold text-secondary001`}>
+      <h2 className={`uppercase text-sm font-bold text-light_primary`}>
         {step}
       </h2>
       <h1 className={`${processStyles} font-bold`}>{process}</h1>
