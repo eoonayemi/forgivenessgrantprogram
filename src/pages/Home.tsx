@@ -67,7 +67,7 @@ const Home = () => {
           <img
             src={heroImg}
             alt="Hero Image"
-            className="w-[50rem] sm:w-[70rem] lg:w-[100rem] object-contain"
+            className="w-[100rem] sm:w-[150rem] lg:w-[150rem] object-contain"
           />
         </div>
       </section>

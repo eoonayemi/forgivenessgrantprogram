@@ -12,7 +12,7 @@ interface FooterColProps {
 }
 
 const FooterCol = ({ links, heading }: FooterColProps) => {
-  const { setActivePath } = useAppContext();
+  const { activePath, setActivePath } = useAppContext();
   return (
     <div className="text-white text-sm">
       <h3 className="font-bold mb-3">{heading}</h3>
@@ -24,6 +24,9 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
             onClick={() => {
               setActivePath(path);
             }}
+            className={`${
+              path === activePath ? "text-light_primary font-medium" : ""
+            }`}
           >
             {name}
           </HashLink>

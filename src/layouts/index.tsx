@@ -26,7 +26,7 @@ const Layout = () => {
 
       <Outlet />
       <footer className="bg-dark_primary footer-res-p">
-        <div className="flex flex-row md:gap-40 gap-20 justify-center overflow-hidden flex-wrap">
+        <div className="flex flex-row md:gap-40 gap-20 max-md:justify-center overflow-hidden flex-wrap">
           {footerLinks.map((link, i) => (
             <FooterCol key={i} {...link} />
           ))}
@@ -34,15 +34,14 @@ const Layout = () => {
 
         <div className="bg-white w-full h-[0.005rem] mt-20"></div>
 
-        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-start gap-10 py-10">
-          <span>Terms & privacy</span>
-          <span>Security</span>
-          <span className="flex gap-2">
-            <span className="flex items-center justify-center">
+        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-center gap-10 py-10">
+          <span className="flex gap-4">
+            <span className="flex items-center justify-center gap-2">
               <Copyright className="" />
-              <span>2024</span>
+              <p>Copyright</p>
+              <span>{new Date().getFullYear()}</span>
             </span>
-            <span>MyAmtApp Ltd</span>
+            <span>Grants4Life</span>
           </span>
         </div>
       </footer>
