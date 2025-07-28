@@ -9,7 +9,6 @@ import {
   SectionBox,
   ServiceCard,
   StatCard,
-  TestimonialSlider,
 } from "../components";
 import {
   // clients,
