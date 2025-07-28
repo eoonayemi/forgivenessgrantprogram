@@ -7,10 +7,12 @@ import {
   ReviewCard,
   SectionBox,
   ServiceCard,
+  StatCard,
 } from "../components";
 import {
   clients,
   faqs,
+  grantStats,
   leftGrantProcess,
   rightGrantProcess,
   services,
@@ -170,9 +172,22 @@ const LandingPage = () => {
             {rightGrantProcess.map((feature, index) => (
               <ProcessCard key={index} {...feature} />
             ))}
+            <div className="self-center mt-10">
+              <CustomButton
+                text="Get Funded"
+                styles="rounded-lg px-6 bg-secondary001"
+                hasArrow
+              />
+            </div>
           </div>
         </div>
       </SectionBox>
+
+      <section className="flex flex-col md:flex-row responsive-p items-center justify-center bg-dark_primary gap-10">
+        {grantStats.map((stat, i) => (
+          <StatCard key={i} {...stat} />
+        ))}
+      </section>
 
       <SectionBox title="What Our Client Says" id="our-clients">
         <div className="w-full flex flex-col sm:flex-row sm:justify-center flex-wrap gap-10 mt-14">

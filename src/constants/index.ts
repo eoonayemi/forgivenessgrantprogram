@@ -1,4 +1,15 @@
-import { User, Phone, Antenna, Receipt, Modem, Id } from "../assets/icons";
+import {
+  User,
+  Phone,
+  Antenna,
+  Receipt,
+  Modem,
+  Id,
+  Grant,
+  Bank,
+  Users,
+  Stat,
+} from "../assets/icons";
 import { auto3d, customerSupport, reliable3d } from "../assets/images";
 
 export const footerLinks = [
@@ -237,5 +248,28 @@ export const rightGrantProcess = [
     process: "Approval and Notification",
     description:
       "Once your application is approved, you will receive an official notification with details about the grant amount and terms of use. Review the grant agreement carefully and sign the necessary documents to confirm your acceptance of the grant.",
+  },
+];
+
+export const grantStats = [
+  {
+    label: "Grants Awarded",
+    value: "219K+",
+    Icon: Grant,
+  },
+  {
+    label: "Total Funds Distributed",
+    value: "$36M",
+    Icon: Bank,
+  },
+  {
+    label: "Beneficiaries Impacted",
+    value: "484K",
+    Icon: Users,
+  },
+  {
+    label: "Satisfaction Rate",
+    value: "98%",
+    Icon: Stat,
   },
 ];

@@ -16,3 +16,7 @@ export { SiComma as Comma } from "react-icons/si";
 export { IoIosStar as Star } from "react-icons/io";
 export { IoIosArrowDown as ArrowDown } from "react-icons/io";
 export { IoIosArrowUp as ArrowUp } from "react-icons/io";
+export { FaHandsHoldingCircle as Grant } from "react-icons/fa6";
+export { RiBankFill as Bank } from "react-icons/ri";
+export { FaUsers as Users } from "react-icons/fa";
+export { BiStats as Stat } from "react-icons/bi";

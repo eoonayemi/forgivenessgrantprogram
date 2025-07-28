@@ -17,7 +17,7 @@ const ServiceCard = ({
 }: ServiceCardProps) => {
   return (
     <div
-      className={`${cardStyles}h-fit md:h-[15rem] flex flex-col text-left text-my_black gap-2 p-10`}
+      className={`${cardStyles}h-fit md:h-[15rem] flex flex-col text-left text-my_black gap-2 p-10 rounded-xl`}
     >
       <h2 className={`${nameStyles} text-xl font-semibold`}>{name}</h2>
       <p className={`${desStyles} text-gray-500`}>{description}</p>

@@ -17,7 +17,7 @@ const ProcessCard = ({
 }: ProcessCardProps) => {
   return (
     <div
-      className={`${cardStyles} h-fit flex flex-col text-left text-white gap-2 p-10 bg-dark_primary shadow-xl`}
+      className={`${cardStyles} h-fit flex flex-col text-left text-white gap-2 p-10 bg-dark_primary shadow-xl rounded-xl w-[20rem]`}
     >
       <h2 className={`uppercase text-sm font-bold text-secondary001`}>
         {step}
