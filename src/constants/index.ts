@@ -10,46 +10,53 @@ import {
   Users,
   Stat,
 } from "../assets/icons";
-import { auto3d, customerSupport, reliable3d } from "../assets/images";
+import {
+  auto3d,
+  college_graduate,
+  community_leader,
+  customerSupport,
+  entrepreneur,
+  professional_baker,
+  reliable3d,
+  small_business_owner,
+} from "../assets/images";
 
 export const footerLinks = [
   {
-    heading: "Company",
+    heading: "Contact Us",
     links: [
-      { name: "About Us", path: "/about" },
-      { name: "Careers", path: "/careers" },
-      { name: "Blog", path: "/blog" },
-      { name: "Press", path: "/press" },
+      { name: "info@grant4life.com", path: "mailto:info@grant4life.com" },
     ],
   },
   {
-    heading: "Support",
+    heading: "Explore",
     links: [
-      { name: "Help Center", path: "/help" },
-      { name: "Contact Us", path: "/contact" },
-      { name: "FAQs", path: "/faqs" },
-      { name: "Privacy Policy", path: "/privacy-policy" },
-      { name: "Terms of Service", path: "/terms" },
+      { name: "Home", path: "/#home" },
+      { name: "About Us", path: "/#about-us" },
+      { name: "Our Services", path: "/#our-services" },
+      { name: "Our Process", path: "/#our-process" },
+      { name: "FAQs", path: "/#faqs" },
+      { name: "Contact Us", path: "/#contact-us" },
     ],
   },
-  {
-    heading: "Services",
-    links: [
-      { name: "Airtime Top-Up", path: "/services/airtime-topup" },
-      { name: "Data Subscription", path: "/services/data-subscription" },
-      { name: "Bill Payment", path: "/services/bill-payment" },
-      { name: "Verifications", path: "/services/verifications" },
-    ],
-  },
-  {
-    heading: "Follow Us",
-    links: [
-      { name: "Facebook", path: "https://facebook.com/MyAmtApp" },
-      { name: "Twitter", path: "https://twitter.com/MyAmtApp" },
-      { name: "Instagram", path: "https://instagram.com/MyAmtApp" },
-      { name: "LinkedIn", path: "https://linkedin.com/company/MyAmtApp" },
-    ],
-  },
+  // {
+  //   heading: "Services",
+  //   links: [
+  //     { name: "Airtime Top-Up", path: "/services/airtime-topup" },
+  //     { name: "Data Subscription", path: "/services/data-subscription" },
+  //     { name: "Bill Payment", path: "/services/bill-payment" },
+  //     { name: "Verifications", path: "/services/verifications" },
+  //   ],
+  // },
+  // {
+  //   heading: "Follow Us",
+  //   links: [
+  //     { name: "Facebook", path: "https://facebook.com/MyAmtApp" },
+  //     { name: "Twitter", path: "https://twitter.com/MyAmtApp" },
+  //     { name: "Instagram", path: "https://instagram.com/MyAmtApp" },
+  //     { name: "LinkedIn", path: "https://linkedin.com/company/MyAmtApp" },
+  //   ],
+  // },
 ];
 
 export const landingPageLinks = [
@@ -103,6 +110,44 @@ export const clients = [
   },
 ];
 
+export const reviews = [
+  {
+    name: "Chinedu Okafor",
+    title: "Small Business Owner",
+    review:
+      "Thanks to Grants4Life, I was able to launch my dream bakery without worrying about debt. The process was quick, transparent, and life-changing.",
+    image: small_business_owner,
+  },
+  {
+    name: "Maria Fernandez",
+    title: "Professional Baker",
+    review:
+      "I received an educational grant that covered my tuition fees. Grants4Life truly removed the financial burden and gave me hope for the future.",
+    image: professional_baker,
+  },
+  {
+    name: "Sophia Lee",
+    title: "Entrepreneur",
+    review:
+      "With the support of Grants4Life, we were able to set up a community center that provides free skill training for youth in our neighborhood.",
+    image: entrepreneur,
+  },
+  {
+    name: "Angela Brooks",
+    title: "College Graduate",
+    review:
+      "Grants4Life believed in my idea when no one else did. Their innovation grant helped me develop an app that connects farmers to buyers directly.",
+    image: college_graduate,
+  },
+  {
+    name: "David Johnson",
+    title: "Community Leader",
+    review:
+      "When my family faced an unexpected crisis, Grants4Life provided emergency support within days. I’ll always be grateful for their compassion.",
+    image: community_leader,
+  },
+];
+
 export const faqs = [
   {
     question: "What is the Forgiveness Grant Program?",
@@ -113,11 +158,6 @@ export const faqs = [
     question: "Who is eligible to apply for a grant?",
     answer:
       "Eligibility varies depending on the specific grant. Generally, we support individuals, small businesses, non-profit organizations, and community initiatives that align with our mission of fostering growth, education, and innovation. Please check our eligibility page for detailed criteria.",
-  },
-  {
-    question: "Is MyAmtApp secure?",
-    answer:
-      "Yes, MyAmtApp uses advanced security protocols to ensure all transactions and personal data are protected.",
   },
   {
     question: "How do I apply for a grant?",

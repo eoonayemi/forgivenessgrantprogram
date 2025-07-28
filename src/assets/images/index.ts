@@ -10,6 +10,11 @@ import auto3d from "./auto-3d.png";
 import reliable3d from "./reliable-3d.png";
 import ourVision from "./our-vision.jpg";
 import ourMission from "./our-mission.jpg";
+import college_graduate from "./college-graduate.jpg";
+import community_leader from "./community-leader.jpg";
+import entrepreneur from "./entrepreneur.jpg";
+import professional_baker from "./professional-baker.jpg";
+import small_business_owner from "./small-business-owner.jpg";
 
 export {
   about_us_sec2,
@@ -24,4 +29,9 @@ export {
   ourVision,
   ourMission,
   reliable3d,
+  college_graduate,
+  community_leader,
+  entrepreneur,
+  professional_baker,
+  small_business_owner,
 };

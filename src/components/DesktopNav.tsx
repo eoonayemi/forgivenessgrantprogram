@@ -4,6 +4,7 @@ import { HashLink } from "react-router-hash-link";
 
 const DesktopNav = () => {
   const [currentPath, setCurrentPath] = useState("home");
+  
   return (
     <div className={`flex gap-16 overflow-hidden items-center`}>
       <nav className="flex gap-14 max-lg:hidden">

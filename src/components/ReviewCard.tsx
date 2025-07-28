@@ -1,22 +1,21 @@
-import type { IconType } from "react-icons";
-import { Comma, Star } from "../assets/icons";
+import { Comma } from "../assets/icons";
 
 interface ReviewCardProps {
   name: string;
+  title: string;
+  image: string;
   review: string;
   cardStyles?: string;
   inlineStyles?: React.CSSProperties;
-  starRating: number;
-  Icon: IconType;
 }
 
 const ReviewCard = ({
   name,
   review,
+  title,
+  image,
   cardStyles,
   inlineStyles,
-  starRating,
-  Icon,
 }: ReviewCardProps) => {
   return (
     <div
@@ -35,17 +34,10 @@ const ReviewCard = ({
       <div className="bg-white h-[0.5px] mt-auto"></div>
 
       <div className="flex gap-5 items-center">
-        <Icon className="text-5xl" />
-        <span className="font-semibold text-dark_primary">
-          <p>{name}</p>
-          <div className="flex gap-1 mt-1">
-            {[...Array(starRating)].map(() => (
-              <Star className="text-secondary001 text-xs" />
-            ))}
-            {[...Array(5 - starRating)].map(() => (
-              <Star className="text-gray-300 text-xs" />
-            ))}
-          </div>
+        <img src={image} alt={title} className="rounded-full h-11 w-12" />
+        <span className=" text-dark_primary">
+          <p className="font-semibold">{name}</p>
+          <p className="text-white text-sm">{title}</p>
         </span>
       </div>
     </div>

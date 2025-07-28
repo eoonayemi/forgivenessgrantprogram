@@ -20,16 +20,16 @@ import {
   services,
 } from "../constants";
 import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
-import {
-  Facebook,
-  Instagram,
-  Telegram,
-  Twitter,
-  Whatsapp,
-} from "../assets/icons";
+// import {
+//   Facebook,
+//   Instagram,
+//   Telegram,
+//   Twitter,
+//   Whatsapp,
+// } from "../assets/icons";
 import { useNavigate } from "react-router-dom";
 
-const LandingPage = () => {
+const Home = () => {
   // const [activeReview, setActiveReview] = useState(0);
   const navigate = useNavigate();
 
@@ -160,8 +160,8 @@ const LandingPage = () => {
 
       <SectionBox
         title="Our Process"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget felis nec arcu bibendum faucibus. Donec sit amet mauris sit amet nunc vulputate malesuada. Sed eu turpis in justo malesuada vestibulum at sed orci. Cras porta euismod purus, a imperdiet tortor condimentum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
-        id="our-services"
+        description="Getting the support you need is simple and straightforward. Our process is designed to be fast, transparent, and stress-free from application to approval. Follow the steps below to see how you can access your grant in just a few days. Each application is carefully reviewed to ensure fairness, clarity and prompt response."
+        id="our-process"
         cardStyles="gap-20"
       >
         <div className="hidden w-full md:flex flex-row items-center justify-center gap-32 px-[180px]">
@@ -223,7 +223,11 @@ const LandingPage = () => {
         </div>
       </SectionBox>
 
-      <SectionBox
+      <section className="bg-white text-center py-5 text-sm md:text-lg font-semibold">
+        <p>"Funding hopes, Fueling dreams"</p>
+      </section>
+
+      {/* <SectionBox
         title="Try MyAmtApp Today"
         description="We offer instant recharge of airtime, databundle, cable TV subscriptions, Electricity bill payments and more."
         id="try-now"
@@ -258,11 +262,11 @@ const LandingPage = () => {
             </span>
           </div>
         </div>
-      </SectionBox>
+      </SectionBox> */}
 
       {/* <ArrowUpCircle className="absolute text-white text-4xl right-[3rem]" /> */}
     </main>
   );
 };
 
-export default LandingPage;
+export default Home;

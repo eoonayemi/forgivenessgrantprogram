@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import { clients } from "../constants";
+import { clients, reviews } from "../constants";
 import ReviewCard from "./ReviewCard";
 
 const ActiveSlider = () => {
@@ -58,10 +58,10 @@ const ActiveSlider = () => {
         onSlideChange={handleInteraction}
         onClick={handleInteraction}
       >
-        {clients.map((client, index) => (
+        {reviews.map((review, index) => (
           <SwiperSlide key={index}>
             <div className="mb-20">
-              <ReviewCard {...client} cardStyles={``} />
+              <ReviewCard {...review} cardStyles={``} />
             </div>
           </SwiperSlide>
         ))}

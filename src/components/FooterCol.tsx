@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { HashLink } from "react-router-hash-link";
 
 interface LinkProps {
   name: string;
@@ -16,9 +16,9 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
       <h3 className="font-bold mb-3">{heading}</h3>
       <div className="flex flex-col gap-3 text-xs">
         {links.map(({ name, path }, i) => (
-          <Link key={i} to={path}>
+          <HashLink key={i} to={path}>
             {name}
-          </Link>
+          </HashLink>
         ))}
       </div>
     </div>
