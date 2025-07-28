@@ -11,7 +11,6 @@ import {
   TestimonialSlider,
 } from "../components";
 import {
-  
   // clients,
   faqs,
   grantProcess,
