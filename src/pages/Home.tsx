@@ -223,8 +223,8 @@ const Home = () => {
         </div>
       </SectionBox>
 
-      <section className="bg-white text-center py-5 text-sm md:text-lg font-semibold">
-        <p>"Funding hopes, Fueling dreams"</p>
+      <section className="text-white bg-light_primary text-center py-5 text-sm md:text-lg font-bold">
+        <p>"Funding ambitions & empowering futures"</p>
       </section>
 
       {/* <SectionBox

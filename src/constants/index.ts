@@ -31,12 +31,12 @@ export const footerLinks = [
   {
     heading: "Explore",
     links: [
-      { name: "Home", path: "/#home" },
-      { name: "About Us", path: "/#about-us" },
-      { name: "Our Services", path: "/#our-services" },
-      { name: "Our Process", path: "/#our-process" },
-      { name: "FAQs", path: "/#faqs" },
-      { name: "Contact Us", path: "/#contact-us" },
+      { name: "Home", path: "home" },
+      { name: "About Us", path: "about-us" },
+      { name: "Our Services", path: "our-services" },
+      { name: "Our Process", path: "our-process" },
+      { name: "FAQs", path: "faqs" },
+      { name: "Contact Us", path: "contact-us" },
     ],
   },
   // {
@@ -112,38 +112,38 @@ export const clients = [
 
 export const reviews = [
   {
-    name: "Chinedu Okafor",
+    name: "John A.",
     title: "Small Business Owner",
     review:
-      "Thanks to Grants4Life, I was able to launch my dream bakery without worrying about debt. The process was quick, transparent, and life-changing.",
+      "The Forgiveness Grant Program gave me the financial support I needed to launch my small bakery. With their help, I could finally turn my passion for baking into a thriving business. I'm forever grateful for the opportunity they provided me to follow my dreams without the stress of repayment.",
     image: small_business_owner,
   },
   {
     name: "Maria Fernandez",
     title: "Professional Baker",
     review:
-      "I received an educational grant that covered my tuition fees. Grants4Life truly removed the financial burden and gave me hope for the future.",
+      "Our non-profit organization was struggling to fund a new program for underserved children. The grant from the Forgiveness Grant Program came at the perfect time, allowing us to expand our services and reach more kids. Their generosity has made a huge impact on our community, and we are deeply thankful.",
     image: professional_baker,
   },
   {
     name: "Sophia Lee",
     title: "Entrepreneur",
     review:
-      "With the support of Grants4Life, we were able to set up a community center that provides free skill training for youth in our neighborhood.",
+      "I had a great business idea but lacked the capital to get started. The Forgiveness Grant Program believed in me when no one else did. With their funding, I was able to launch my online boutique, which has now grown beyond my expectations. I'm proud to say I'm running a successful business, all debt-free!",
     image: entrepreneur,
   },
   {
     name: "Angela Brooks",
     title: "College Graduate",
     review:
-      "Grants4Life believed in my idea when no one else did. Their innovation grant helped me develop an app that connects farmers to buyers directly.",
+      "As a first-generation college student, I was worried about how I would afford my education. The non-repayment grant I received allowed me to focus on my studies instead of worrying about student loans. Today, I'm a proud graduate and the first in my family to earn a degree, all thanks to the Forgiveness Grant Program.",
     image: college_graduate,
   },
   {
     name: "David Johnson",
     title: "Community Leader",
     review:
-      "When my family faced an unexpected crisis, Grants4Life provided emergency support within days. I’ll always be grateful for their compassion.",
+      "Our community was in desperate need of a youth center, but we didn't have the funds to build one. The grant we received from the Forgiveness Grant Program made our dream a reality. The center is now a safe space for young people to learn, grow, and thrive. We couldn't have done it without their support!",
     image: community_leader,
   },
 ];

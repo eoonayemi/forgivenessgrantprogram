@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { landingPageLinks } from "../constants";
 import { HashLink } from "react-router-hash-link";
+import { useAppContext } from "@/contexts/AppContext";
 
 interface NavProps {
   navIsOpen: boolean;
@@ -8,7 +8,7 @@ interface NavProps {
 }
 
 const MobileNav = ({ navIsOpen, onSetNavIsOpen }: NavProps) => {
-  const [currentPath, setCurrentPath] = useState("home");
+  const { activePath, setActivePath } = useAppContext();
 
   return (
     <div
@@ -22,12 +22,12 @@ const MobileNav = ({ navIsOpen, onSetNavIsOpen }: NavProps) => {
             smooth
             to={`#${path}`}
             className={`${
-              currentPath == path
+              activePath == path
                 ? "bg-[#ececec] text-light_primary font-semibold"
                 : "text-gray-500"
             } p-5 text-[16px] font-medium`}
             onClick={() => {
-              setCurrentPath(path);
+              setActivePath(path);
               onSetNavIsOpen();
             }}
           >
