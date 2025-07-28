@@ -251,6 +251,46 @@ export const rightGrantProcess = [
   },
 ];
 
+export const grantProcess = [
+  {
+    step: "First Step",
+    process: "Check Eligibility",
+    description:
+      "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
+  },
+  {
+    step: "Second Step",
+    process: "Submit Your Application",
+    cardStyles: "bg-white",
+    processStyles: "text-slate-400",
+    desStyles: "text-slate-400",
+    description:
+      "Complete the online application form with details about yourself, your project or purpose for the grant, and how the funds will be used. Fill out the application form on our website, providing all required information and supporting documents.",
+  },
+  {
+    step: "Third Step",
+    process: "Application Review",
+
+    description:
+      "Our team carefully reviews all submitted applications to ensure they meet our criteria and align with our mission. This process typically takes 12-24 hours. Ensure your application is complete and submitted on time. Our team will reach out if additional information is needed.",
+  },
+  {
+    step: "Fourth Step",
+    process: "Approval and Notification",
+    cardStyles: "bg-white",
+    processStyles: "text-slate-400",
+    desStyles: "text-slate-400",
+    description:
+      "Once your application is approved, you will receive an official notification with details about the grant amount and terms of use. Review the grant agreement carefully and sign the necessary documents to confirm your acceptance of the grant.",
+  },
+  {
+    step: "Fifth Step",
+    process: "Funding Disbursement",
+    description:
+      "After all agreements are signed, funds will be disbursed according to the grant’s terms. This process is typically completed within 48 hours of approval.",
+  },
+];
+
 export const grantStats = [
   {
     label: "Grants Awarded",

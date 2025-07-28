@@ -53,12 +53,10 @@ const TestimonialSlider = () => {
   return (
     <section className="h-fit responsive-p flex flex-col max-sm:justify-center {md:items-center}">
       <div className="container mx-auto px-4 mb-12">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
+        <h2 className="md:text-3xl text-2xl leading-normal lg:leading-snug font-bold">
           What Our Customers Say
         </h2>
-        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto">
-          Join thousands of satisfied customers who trust our platform
-        </p>
+        <p>Join thousands of satisfied customers who trust our platform</p>
       </div>
 
       <div className="relative overflow-hidden flex items-center justify-center">

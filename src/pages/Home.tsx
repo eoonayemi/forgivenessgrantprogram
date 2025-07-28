@@ -13,6 +13,7 @@ import {
 import {
   // clients,
   faqs,
+  grantProcess,
   grantStats,
   leftGrantProcess,
   rightGrantProcess,
@@ -163,7 +164,7 @@ const LandingPage = () => {
         id="our-services"
         cardStyles="gap-20"
       >
-        <div className="w-full flex flex-col md:flex-row items-center justify-center gap-5 md:gap-32 md:px-[180px]">
+        <div className="hidden w-full md:flex flex-row items-center justify-center gap-32 px-[180px]">
           <div className="flex flex-col gap-5">
             {leftGrantProcess.map((feature, index) => (
               <ProcessCard key={index} {...feature} />
@@ -171,6 +172,20 @@ const LandingPage = () => {
           </div>
           <div className="flex flex-col gap-5">
             {rightGrantProcess.map((feature, index) => (
+              <ProcessCard key={index} {...feature} />
+            ))}
+            <div className="self-center mt-10">
+              <CustomButton
+                text="Get Funded"
+                styles="rounded-lg px-6 bg-light_primary"
+                hasArrow
+              />
+            </div>
+          </div>
+        </div>
+        <div className="md:hidden w-full flex flex-col items-center justify-center gap-5">
+          <div className="flex flex-col gap-5">
+            {grantProcess.map((feature, index) => (
               <ProcessCard key={index} {...feature} />
             ))}
             <div className="self-center mt-10">
