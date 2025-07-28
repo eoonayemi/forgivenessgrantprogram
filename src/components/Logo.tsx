@@ -18,7 +18,7 @@ const Logo = ({ isWhite, boxStyles, imgStyles, textStyles }: LogoProps) => {
         className={`${imgStyles} h-5`}
       />
       <span
-        className={`${textStyles} font-[500] ${
+        className={`${textStyles} font-bold tracking-widest  ${
           isWhite ? "text-white" : "text-light_primary"
         }`}
       >

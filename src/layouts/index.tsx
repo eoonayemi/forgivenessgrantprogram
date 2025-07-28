@@ -41,7 +41,7 @@ const Layout = () => {
               <p>Copyright</p>
               <span>{new Date().getFullYear()}</span>
             </span>
-            <span>Grants4Life</span>
+            <Logo imgStyles="w-5 h-3" isWhite />
           </span>
         </div>
       </footer>
