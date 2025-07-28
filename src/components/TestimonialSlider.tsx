@@ -1,5 +1,4 @@
 import ReviewCard from "./ReviewCard";
-import React from "react";
 import { User, Users, Briefcase, Heart, Zap, Trophy } from "lucide-react";
 
 const TestimonialSlider = () => {

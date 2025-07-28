@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import {
   ContentImgCard,
   CustomButton,
   FAQCard,
   ProcessCard,
-  ReviewCard,
+  // ReviewCard,
   SectionBox,
   ServiceCard,
   StatCard,
   TestimonialSlider,
 } from "../components";
 import {
-  clients,
+  // clients,
   faqs,
   grantStats,
   leftGrantProcess,
@@ -29,16 +29,16 @@ import {
 import { useNavigate } from "react-router-dom";
 
 const LandingPage = () => {
-  const [activeReview, setActiveReview] = useState(0);
+  // const [activeReview, setActiveReview] = useState(0);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveReview((prev) => (prev + 1) % clients.length);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveReview((prev) => (prev + 1) % clients.length);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <main className="mt-16 min-h-full text-[16px]">
