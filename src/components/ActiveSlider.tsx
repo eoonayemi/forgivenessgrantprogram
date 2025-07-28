@@ -1,4 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef } from "react";
+import type { Swiper as SwiperType } from "swiper";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,9 +11,28 @@ import { clients } from "../constants";
 import ReviewCard from "./ReviewCard";
 
 const ActiveSlider = () => {
+  const swiperRef = useRef<SwiperType | null>(null);
+
+  const handleInteraction = () => {
+    // Stop autoplay on interaction
+    if (swiperRef.current?.autoplay) {
+      swiperRef.current.autoplay.stop();
+    }
+
+    // Resume autoplay after 3 seconds of no interaction
+    setTimeout(() => {
+      if (swiperRef.current?.autoplay) {
+        swiperRef.current.autoplay.start();
+      }
+    }, 3000);
+  };
+
   return (
     <div className="flex items-center justify-center flex-col">
       <Swiper
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+        }}
         breakpoints={{
           340: {
             slidesPerView: 1,
@@ -27,12 +48,15 @@ const ActiveSlider = () => {
           clickable: true,
         }}
         autoplay={{
-          delay: 3000, // 3 seconds between slides
-          disableOnInteraction: false, // keep autoplaying after user interaction
+          delay: 7000,
+          disableOnInteraction: false, // Don't disable autoplay permanently
         }}
-        loop={true} // makes it swipe infinitely
+        loop={true}
         modules={[FreeMode, Pagination, Autoplay]}
         className="w-[20rem] lg:w-[45rem]"
+        onTouchStart={handleInteraction}
+        onSlideChange={handleInteraction}
+        onClick={handleInteraction}
       >
         {clients.map((client, index) => (
           <SwiperSlide key={index}>

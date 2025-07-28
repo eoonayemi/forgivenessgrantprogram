@@ -105,14 +105,14 @@ export const clients = [
 
 export const faqs = [
   {
-    question: "What is MyAmtApp?",
+    question: "What is the Forgiveness Grant Program?",
     answer:
-      "MyAmtApp is a virtual top-up platform that allows you to buy airtime, data, pay utility bills, and handle essential verifications all in one secure app.",
+      "The Forgiveness Grant Program is a non-repayment grant agency dedicated to providing financial support to individuals, small businesses, non-profits, and community projects. Our grants are designed to help recipients achieve their goals without the burden of debt.",
   },
   {
-    question: "How do I top up airtime using MyAmtApp?",
+    question: "Who is eligible to apply for a grant?",
     answer:
-      "Simply select 'Airtime Top-Up,' choose your network, enter the amount, and confirm your payment. The airtime will be instantly credited to the chosen number.",
+      "Eligibility varies depending on the specific grant. Generally, we support individuals, small businesses, non-profit organizations, and community initiatives that align with our mission of fostering growth, education, and innovation. Please check our eligibility page for detailed criteria.",
   },
   {
     question: "Is MyAmtApp secure?",
@@ -120,24 +120,39 @@ export const faqs = [
       "Yes, MyAmtApp uses advanced security protocols to ensure all transactions and personal data are protected.",
   },
   {
-    question: "Can I pay my electricity and cable bills with MyAmtApp?",
+    question: "How do I apply for a grant?",
     answer:
-      "Absolutely! MyAmtApp allows you to pay for utilities like electricity (NEPA bills) and renew cable subscriptions for providers like GOTV and DSTV.",
+      "To apply, simply visit our website and fill out the online application form. Be sure to provide all required information and supporting documents to ensure your application is complete.",
   },
   {
-    question: "How do I verify my NIN or BVN using MyAmtApp?",
+    question: "Is there an application fee?",
     answer:
-      "Go to the 'Verifications' section, select NIN or BVN verification, and follow the prompts to complete the process. You can also print the verification slip if needed.",
+      "No, there is no fee to apply for a grant through the Forgiveness Grant Program. Our goal is to make the process as accessible as possible for all applicants.",
   },
   {
-    question: "What payment methods does MyAmtApp accept?",
+    question: "What types of projects or initiatives do you fund?",
     answer:
-      "MyAmtApp accepts various payment methods, including debit cards and mobile wallets, to make your transactions as convenient as possible.",
+      "We fund a wide range of projects, including educational pursuits, small business startups, community initiatives, and non-profit projects. We are particularly interested in projects that demonstrate a clear impact and align with our values of empowerment, community, and innovation.",
   },
   {
-    question: "How do I contact customer support?",
+    question: "How long does the application review process take?",
     answer:
-      "You can reach customer support through the 'Help' section in the app or via our contact information on the website.",
+      "The review process typically takes 12-24 Hours from the time we receive your completed application. During this time, our team carefully evaluates each application to ensure it meets our criteria.",
+  },
+  {
+    question: "Will I be notified if my application is unsuccessful?",
+    answer:
+      "Yes, all applicants will receive a notification, whether or not their application is successful. We believe in maintaining transparency and providing feedback to help applicants improve their future submissions.",
+  },
+  {
+    question: "Do I have to repay the grant?",
+    answer:
+      "No, our grants are non-repayment, meaning you do not have to pay back the funds you receive. We aim to alleviate financial stress, allowing you to focus on your project or initiative.",
+  },
+  {
+    question: "How is the funding disbursed if my application is approved?",
+    answer:
+      "Once your application is approved and all agreements are signed, the funds will be disbursed according to the terms of the grant. This process typically takes about 2 weeks from the approval date.",
   },
 ];
 
