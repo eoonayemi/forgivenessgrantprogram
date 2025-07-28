@@ -57,7 +57,7 @@ const TestimonialSlider = () => {
         <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
           What Our Customers Say
         </h2>
-        <p className="text-xl text-gray-600 text-center max-w-2xl mx-auto">
+        <p className="text-lg text-gray-600 text-center max-w-2xl mx-auto">
           Join thousands of satisfied customers who trust our platform
         </p>
       </div>
