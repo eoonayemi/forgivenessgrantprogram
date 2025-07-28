@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
 import { FreeMode, Pagination, Autoplay } from "swiper/modules";
-import { clients, reviews } from "../constants";
+import { reviews } from "../constants";
 import ReviewCard from "./ReviewCard";
 
 const ActiveSlider = () => {

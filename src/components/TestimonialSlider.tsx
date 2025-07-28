@@ -5,7 +5,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { clients } from "@/constants";
+import { reviews } from "@/constants";
 import ReviewCard from "./ReviewCard";
 import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
@@ -21,7 +21,7 @@ function TestimonialSlider() {
       //   opts={{ loop: true }}
     >
       <CarouselContent>
-        {clients.map((client, index) => (
+        {reviews.map((client, index) => (
           <CarouselItem key={index} className="md:basis-1/2">
             <ReviewCard {...client} cardStyles={``} />
           </CarouselItem>
