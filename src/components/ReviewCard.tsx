@@ -20,7 +20,7 @@ const ReviewCard = ({
 }: ReviewCardProps) => {
   return (
     <div
-      className={`${cardStyles} text-white bg-light_primary rounded-xl p-10 flex flex-col gap-10`}
+      className={`${cardStyles} h-[] text-white bg-light_primary rounded-xl p-10 flex flex-col gap-10`}
     >
       <div
         style={inlineStyles}

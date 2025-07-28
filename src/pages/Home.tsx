@@ -11,6 +11,7 @@ import {
   TestimonialSlider,
 } from "../components";
 import {
+  clients,
   // clients,
   faqs,
   grantProcess,
@@ -205,32 +206,11 @@ const LandingPage = () => {
         ))}
       </section>
 
-      {/* <SectionBox title="What Our Client Says" id="our-clients">
-        <div className="w-full flex flex-col sm:flex-row sm:justify-center flex-wrap gap-10 mt-14">
-          {clients.map((client, i) => (
-            <ReviewCard
-              key={i}
-              {...client}
-              cardStyles={`md:w-[31.1%] sm:w-[46.8%] transition-all duration-500 bg-light_primary ${
-                activeReview == i
-                  ? "md:scale-[100%]"
-                  : "max-sm:hidden md:scale-[90%]"
-              }`}
-            />
-          ))}
+      <SectionBox title="What Our Client Says" id="our-clients">
+        <div className="flex items-center justify-center mt-20">
+          <TestimonialSlider />
         </div>
-        <div className="flex flex-row gap-2 items-center justify-center mt-10">
-          {clients.map((_, i) => (
-            <div
-              className={`h-2 w-2 ${
-                activeReview == i ? "bg-dark_primary" : "bg-light_primary"
-              } rounded-full`}
-            ></div>
-          ))}
-        </div>
-      </SectionBox> */}
-
-      <TestimonialSlider />
+      </SectionBox>
 
       <SectionBox
         title="Frequently Asked Questions (FAQs)"
