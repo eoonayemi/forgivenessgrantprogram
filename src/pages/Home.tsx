@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 import {
+  ActiveSlider,
   ContentImgCard,
   CustomButton,
   FAQCard,
@@ -207,7 +208,7 @@ const LandingPage = () => {
 
       <SectionBox title="What Our Client Says" id="our-clients">
         <div className="flex items-center justify-center mt-20">
-          <TestimonialSlider />
+          <ActiveSlider />
         </div>
       </SectionBox>
 
