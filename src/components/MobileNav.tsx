@@ -23,9 +23,9 @@ const MobileNav = ({ navIsOpen, onSetNavIsOpen }: NavProps) => {
             to={`#${path}`}
             className={`${
               currentPath == path
-                ? "bg-[#ececec] text-light_primary font-normal"
+                ? "bg-[#ececec] text-light_primary font-semibold"
                 : "text-gray-500"
-            } p-5 text-[16px]`}
+            } p-5 text-[16px] font-medium`}
             onClick={() => {
               setCurrentPath(path);
               onSetNavIsOpen();

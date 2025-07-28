@@ -12,6 +12,19 @@
   @apply px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px] pt-20;
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 5s linear infinite;
+}
+
 /* Remove background highlight on input focus */
 input:focus {
   outline: none; /* Removes the default outline */

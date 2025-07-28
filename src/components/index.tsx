@@ -11,3 +11,4 @@ export { default as SectionBox } from "./SectionBox";
 export { default as ServiceCard } from "./ServiceCard";
 export { default as ProcessCard } from "./ProcessCard";
 export { default as StatCard } from "./StatCard";
+export { default as TestimonialSlider } from "./TestimonialSlider";

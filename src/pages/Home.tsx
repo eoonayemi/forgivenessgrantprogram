@@ -8,6 +8,7 @@ import {
   SectionBox,
   ServiceCard,
   StatCard,
+  TestimonialSlider,
 } from "../components";
 import {
   clients,
@@ -189,7 +190,7 @@ const LandingPage = () => {
         ))}
       </section>
 
-      <SectionBox title="What Our Client Says" id="our-clients">
+      {/* <SectionBox title="What Our Client Says" id="our-clients">
         <div className="w-full flex flex-col sm:flex-row sm:justify-center flex-wrap gap-10 mt-14">
           {clients.map((client, i) => (
             <ReviewCard
@@ -212,7 +213,9 @@ const LandingPage = () => {
             ></div>
           ))}
         </div>
-      </SectionBox>
+      </SectionBox> */}
+
+      <TestimonialSlider />
 
       <SectionBox
         title="Frequently Asked Questions (FAQs)"
