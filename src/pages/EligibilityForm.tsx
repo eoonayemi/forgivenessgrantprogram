@@ -203,7 +203,7 @@ const EligibilityForm = () => {
               styles="h-[3rem] rounded-sm bg-slate-200 hover:bg-slate-200 focus:bg-slate-200 laceholder:text-slate-500"
             />
             {isEligible && (
-              <div className="text-light_primary flex gap-2 items-center self-end font-semibold">
+              <div className="text-light_primary flex gap-2 items-center max-sm:justify-center md:self-end font-semibold w-full">
                 <span>Congrats! You're eligible for the grant</span>
                 <Check className="text-lg" />
               </div>
@@ -219,6 +219,7 @@ const EligibilityForm = () => {
                   ? "Apply Now"
                   : "Check Eligibility"
               }
+              disabled={isCheckingEligibility}
               styles="h-[3rem] rounded-sm md:self-end font-bold px-10"
               onClick={() => {
                 isEligible &&
