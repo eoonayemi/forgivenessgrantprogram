@@ -4,6 +4,9 @@ import home_sec1 from "./home-sec1-img.png";
 import home_sec2 from "./home-sec2-img.jpg";
 import aboutUs from "./about-us.png";
 import heroImg from "./hero-img.png";
+import heroImg2 from "./hero-img2.jpg";
+import heroImg3 from "./hero-img3.jpg";
+import heroImg4 from "./hero-img4.jpg";
 import home_video from "./home-video.mp4";
 import customerSupport from "./customer-service-3d.png";
 import auto3d from "./auto-3d.png";
@@ -23,6 +26,9 @@ export {
   home_sec2,
   aboutUs,
   heroImg,
+  heroImg2,
+  heroImg3,
+  heroImg4,
   home_video,
   customerSupport,
   auto3d,

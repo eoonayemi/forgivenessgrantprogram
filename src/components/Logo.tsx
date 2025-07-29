@@ -22,7 +22,7 @@ const Logo = ({ isWhite, boxStyles, imgStyles, textStyles }: LogoProps) => {
           isWhite ? "text-white" : "text-light_primary"
         }`}
       >
-        Grants4Life
+        ForgivenessGrant
       </span>
     </div>
   );

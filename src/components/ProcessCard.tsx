@@ -1,3 +1,5 @@
+import { ArrowRight } from "@/assets/icons";
+
 interface ProcessCardProps {
   step: string;
   process: string;
@@ -5,6 +7,7 @@ interface ProcessCardProps {
   cardStyles?: string;
   processStyles?: string;
   desStyles?: string;
+  hasButton?: boolean;
 }
 
 const ProcessCard = ({
@@ -14,6 +17,7 @@ const ProcessCard = ({
   cardStyles,
   processStyles,
   desStyles,
+  hasButton,
 }: ProcessCardProps) => {
   return (
     <div
@@ -24,6 +28,11 @@ const ProcessCard = ({
       </h2>
       <h1 className={`${processStyles} font-bold`}>{process}</h1>
       <p className={`${desStyles}`}>{description}</p>
+      {hasButton && (
+        <button className="bg-light_primary text-white p-2 self-end mt-5 rounded-full">
+          <ArrowRight className="text-lg font-extrabold" />
+        </button>
+      )}
     </div>
   );
 };

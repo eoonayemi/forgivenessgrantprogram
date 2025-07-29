@@ -27,7 +27,10 @@ export const footerLinks = [
   {
     heading: "Contact Us",
     links: [
-      { name: "info@grant4life.com", path: "mailto:info@grant4life.com" },
+      {
+        name: "info@forgivenessgrant.com",
+        path: "mailto:info@forgivenessgrant.com",
+      },
     ],
   },
   {
@@ -269,6 +272,7 @@ export const leftGrantProcess = [
   {
     step: "First Step",
     process: "Check Eligibility",
+    hasButton: true,
     description:
       "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
   },
@@ -284,7 +288,7 @@ export const leftGrantProcess = [
   },
 
   {
-    step: "Fifth Step",
+    step: "Final Step",
     process: "Funding Disbursement",
     description:
       "After all agreements are signed, funds will be disbursed according to the grant’s terms. This process is typically completed within 48 hours of approval.",
@@ -313,6 +317,7 @@ export const grantProcess = [
   {
     step: "First Step",
     process: "Check Eligibility",
+    hasButton: true,
     description:
       "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
   },
@@ -342,7 +347,7 @@ export const grantProcess = [
       "Once your application is approved, you will receive an official notification with details about the grant amount and terms of use. Review the grant agreement carefully and sign the necessary documents to confirm your acceptance of the grant.",
   },
   {
-    step: "Fifth Step",
+    step: "Final Step",
     process: "Funding Disbursement",
     description:
       "After all agreements are signed, funds will be disbursed according to the grant’s terms. This process is typically completed within 48 hours of approval.",

@@ -22,7 +22,15 @@ import {
   rightGrantProcess,
   services,
 } from "../constants";
-import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
+import {
+  aboutUs,
+  // heroImg,
+  // heroImg2,
+  // heroImg3,
+  heroImg4,
+  ourMission,
+  ourVision,
+} from "../assets/images";
 // import {
 //   Facebook,
 //   Instagram,
@@ -62,14 +70,14 @@ const Home = () => {
         id="home"
         className="text-white h-fit gap-20 bg-dark_primary responsive-p text-center md:text-left flex flex-col md:flex-row justify-center items-center"
       >
-        <div className="flex leading-relaxed flex-col gap-10 items-center md:items-start justify-center {self-start}">
+        <div className="flex flex-1 leading-relaxed flex-col gap-10 items-center md:items-start justify-center {self-start}">
           <h1 className="text-3xl leading-normal sm:text-4xl lg:leading-snug lg:text-5xl font-extrabold">
             Fueling Dreams for Individuals & Businesses with Accessible Funding
           </h1>
           <p>
-            At Grants4life, we fund ambitions and empower futures by offering
-            non-repayment grants to support your goal in education, business or
-            community projects without the burden of debt.
+            At ForgivenessGrant, we fund ambitions and empower futures by
+            offering non-repayment grants to support your goal in education,
+            business or community projects without the burden of debt.
           </p>
           <CustomButton
             text="Get Started"
@@ -78,12 +86,8 @@ const Home = () => {
             onClick={() => navigate("/register")}
           />
         </div>
-        <div className="overflow-hidden">
-          <img
-            src={heroImg}
-            alt="Hero Image"
-            className="w-[60rem] h-[21rem] lg:w-[90rem] lg:h-[31.5rem] rounded-[50%]"
-          />
+        <div className="overflow-hidden rounded-[50%] w-[26.6rem] h-[26.6rem] sm:w-[20rem] sm:h-[20rem]  lg:w-[25rem] lg:h-[25rem] xl:w-[35rem] xl:h-[35%]  bg-orange-800">
+          <img src={heroImg4} alt="Hero Image" className="w-full h-full" />
         </div>
       </section>
       <section className="text-white bg-light_primary text-center py-5 text-sm md:text-lg font-bold">
@@ -106,7 +110,7 @@ const Home = () => {
         id="about-us"
         title="About Us"
         description={
-          "At Grants4Life, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Grants4life is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
+          "At ForgivenessGrant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, ForgivenessGrant is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
         }
         img={aboutUs}
         imgAlt="About Us"
@@ -123,7 +127,7 @@ const Home = () => {
         id="our-vision"
         title="Our Vision"
         description={
-          "At Grants4life, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
+          "At ForgivenessGrant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
         }
         img={ourVision}
         imgAlt="Our Vision"
@@ -140,7 +144,7 @@ const Home = () => {
         id="our-mission"
         title="Our Mission"
         description={
-          "Grants4life is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
+          "ForgivenessGrant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
         }
         img={ourMission}
         imgAlt="Our Mission"
