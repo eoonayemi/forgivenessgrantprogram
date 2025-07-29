@@ -65,7 +65,7 @@ const Home = () => {
   };
 
   return (
-    <main className="mt-16 min-h-full text-[16px]">
+    <main className="mt-14 min-h-full text-[16px]">
       <section
         id="home"
         className="text-white h-fit gap-20 bg-dark_primary responsive-p text-center md:text-left flex flex-col md:flex-row justify-center items-center"
@@ -163,7 +163,7 @@ const Home = () => {
         description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
-        titleStyles="text-light_primary"
+        titleStyles="text-white"
         desStyles="text-white"
       >
         <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
@@ -219,10 +219,17 @@ const Home = () => {
         </div>
       </SectionBox>
 
-      <section className="flex flex-col md:flex-row responsive-p items-center justify-center bg-dark_primary gap-10">
-        {grantStats.map((stat, i) => (
-          <StatCard key={i} {...stat} />
-        ))}
+      <section className="flex flex-col responsive-p items-center justify-center bg-dark_primary">
+        <h1
+          className={`md:text-3xl text-2xl leading-normal lg:leading-snug font-bold text-center mb-16 text-white`}
+        >
+          Milestones
+        </h1>
+        <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+          {grantStats.map((stat, i) => (
+            <StatCard key={i} {...stat} />
+          ))}
+        </div>
       </section>
 
       <SectionBox
@@ -239,7 +246,7 @@ const Home = () => {
         title="Frequently Asked Questions (FAQs)"
         id="faqs"
         cardStyles="bg-dark_primary text-white"
-        titleStyles="text-light_primary"
+        titleStyles="text-white"
       >
         <div className="mt-10 flex flex-col gap-[1px] rounded-2xl overflow-hidden">
           {faqs.map((faq, i) => (
