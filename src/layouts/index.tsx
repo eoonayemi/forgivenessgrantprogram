@@ -41,7 +41,7 @@ const Layout = () => {
               <p>Copyright</p>
               <span>{new Date().getFullYear()}</span>
             </span>
-            <Logo imgStyles="w-5 h-3" isWhite />
+            <Logo imgStyles="w-5 h-[12px]" isWhite />
           </span>
         </div>
       </footer>
