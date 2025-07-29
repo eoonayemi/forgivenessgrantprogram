@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 interface LinkProps {
   name: string;
   path: string;
+  isExLink?: boolean;
 }
 
 interface FooterColProps {
@@ -37,18 +38,34 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
     <div className="text-white text-sm">
       <h3 className="font-bold mb-3">{heading}</h3>
       <div className="flex flex-col gap-3 text-xs">
-        {links.map(({ name, path }, i) => (
-          <HashLink
-            key={i}
-            smooth
-            to={pathname === "/" ? `#${path}` : `/#${path}`}
-            onClick={() => handleNavClick(path)}
-            className={`${
-              path === activePath ? "text-light_primary font-medium" : ""
-            }`}
-          >
-            {name}
-          </HashLink>
+        {links.map(({ name, path, isExLink }, i) => (
+          <>
+            {" "}
+            {isExLink ? (
+              <HashLink
+                key={i}
+                smooth
+                to={path}
+                className={`${
+                  path === activePath ? "text-light_primary font-medium" : ""
+                }`}
+              >
+                {name}
+              </HashLink>
+            ) : (
+              <HashLink
+                key={i}
+                smooth
+                to={pathname === "/" ? `#${path}` : `/#${path}`}
+                onClick={() => handleNavClick(path)}
+                className={`${
+                  path === activePath ? "text-light_primary font-medium" : ""
+                }`}
+              >
+                {name}
+              </HashLink>
+            )}
+          </>
         ))}
       </div>
     </div>

@@ -41,7 +41,8 @@ import {
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useState } from "react";
-import { useAppContext } from "@/contexts/AppContext"; // Add this import
+import { useAppContext } from "@/contexts/AppContext";
+import emailjs from "@emailjs/browser";
 
 export const contactFormSchema = z.object({
   name: z.string().min(1, "Username is required"),
@@ -82,9 +83,54 @@ const Home = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // First install EmailJS: npm install @emailjs/browser
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted with:", form);
+
+    // Use safeParse to avoid throwing errors
+    const validation = contactFormSchema.safeParse(form);
+
+    if (!validation.success) {
+      // Simple validation error message
+      const firstError =
+        validation.error.issues[0]?.message || "Please check your input";
+      alert(firstError);
+      return;
+    }
+
+    try {
+      // EmailJS configuration
+      const serviceId = import.meta.env.VITE_SERVICE_ID;
+      const templateId = import.meta.env.VITE_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+
+      // Template parameters
+      const templateParams = {
+        USER_NAME: validation.data.name,
+        USER_EMAIL: validation.data.email,
+        USER_MESSAGE: validation.data.message,
+        TIMESTAMP: new Date().toLocaleString(),
+        to_email: "eoonayemi@gmail.com",
+      };
+
+      // Send email
+      const result = await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams,
+        publicKey
+      );
+
+      console.log("Email sent:", result);
+      alert("Message sent successfully! We'll get back to you soon.");
+
+      // Reset form
+      setForm({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please try again.");
+    }
   };
 
   return (
