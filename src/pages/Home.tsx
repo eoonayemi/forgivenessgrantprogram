@@ -86,7 +86,7 @@ const Home = () => {
             onClick={() => navigate("/register")}
           />
         </div>
-        <div className="overflow-hidden rounded-[50%] w-[26.6rem] h-[26.6rem] sm:w-[20rem] sm:h-[20rem]  lg:w-[25rem] lg:h-[25rem] xl:w-[35rem] xl:h-[35%]  bg-orange-800">
+        <div className="overflow-hidden rounded-[50%] w-full h-full sm:w-[20rem] sm:h-[20rem]  lg:w-[25rem] lg:h-[25rem] xl:w-[35rem] xl:h-[35rem]">
           <img src={heroImg4} alt="Hero Image" className="w-full h-full" />
         </div>
       </section>
