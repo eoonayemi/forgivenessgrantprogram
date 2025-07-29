@@ -219,7 +219,7 @@ const EligibilityForm = () => {
                   ? "Apply Now"
                   : "Check Eligibility"
               }
-              styles="h-[3rem] rounded-sm self-end font-bold px-10"
+              styles="h-[3rem] rounded-sm md:self-end font-bold px-10"
             />
           </form>
         </div>
