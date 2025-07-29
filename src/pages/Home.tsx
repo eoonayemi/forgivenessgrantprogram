@@ -83,7 +83,7 @@ const Home = () => {
             text="Get Started"
             styles="w-[11rem]"
             hasArrow={true}
-            onClick={() => navigate("/register")}
+            onClick={() => navigate("/eligibility-form")}
           />
         </div>
         <div className="overflow-hidden rounded-[50%] w-full h-full sm:w-[20rem] sm:h-[20rem]  lg:w-[25rem] lg:h-[25rem] xl:w-[35rem] xl:h-[35rem]">

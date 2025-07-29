@@ -1,5 +1,6 @@
 import { useAppContext } from "@/contexts/AppContext";
 import { HashLink } from "react-router-hash-link";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface LinkProps {
   name: string;
@@ -13,6 +14,24 @@ interface FooterColProps {
 
 const FooterCol = ({ links, heading }: FooterColProps) => {
   const { activePath, setActivePath } = useAppContext();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = (path: string) => {
+    setActivePath(path);
+
+    // If we're not on the landing page, navigate there first
+    if (pathname !== "/") {
+      navigate("/");
+      // Small delay to ensure page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <div className="text-white text-sm">
@@ -22,10 +41,8 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
           <HashLink
             key={i}
             smooth
-            to={`#${path}`}
-            onClick={() => {
-              setActivePath(path);
-            }}
+            to={pathname === "/" ? `#${path}` : `/#${path}`}
+            onClick={() => handleNavClick(path)}
             className={`${
               path === activePath ? "text-light_primary font-medium" : ""
             }`}

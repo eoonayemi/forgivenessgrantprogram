@@ -1,9 +1,30 @@
 import { landingPageLinks } from "../constants";
 import { HashLink } from "react-router-hash-link";
 import { useAppContext } from "@/contexts/AppContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const DesktopNav = () => {
   const { activePath, setActivePath } = useAppContext();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  console.log(pathname);
+
+  const handleNavClick = (path: string) => {
+    setActivePath(path);
+
+    // If we're not on the landing page, navigate there first
+    if (pathname !== "/") {
+      navigate("/");
+      // Small delay to ensure page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <div className={`flex gap-16 overflow-hidden items-center`}>
@@ -12,13 +33,11 @@ const DesktopNav = () => {
           <div key={i} className="flex flex-col">
             <HashLink
               smooth
-              to={`#${path}`}
+              to={pathname === "/" ? `#${path}` : `/#${path}`}
               className={`${
                 activePath == path ? "text-white" : "text-white"
               }  text-[14px]`}
-              onClick={() => {
-                setActivePath(path);
-              }}
+              onClick={() => handleNavClick(path)}
             >
               {name}
             </HashLink>

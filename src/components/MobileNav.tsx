@@ -1,6 +1,7 @@
 import { landingPageLinks } from "../constants";
 import { HashLink } from "react-router-hash-link";
 import { useAppContext } from "@/contexts/AppContext";
+import { useLocation, useNavigate } from "react-router-dom";
 
 interface NavProps {
   navIsOpen: boolean;
@@ -9,6 +10,25 @@ interface NavProps {
 
 const MobileNav = ({ navIsOpen, onSetNavIsOpen }: NavProps) => {
   const { activePath, setActivePath } = useAppContext();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavClick = (path: string) => {
+    setActivePath(path);
+    onSetNavIsOpen();
+
+    // If we're not on the landing page, navigate there first
+    if (pathname !== "/") {
+      navigate("/");
+      // Small delay to ensure page loads before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(path);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
 
   return (
     <div
@@ -19,17 +39,15 @@ const MobileNav = ({ navIsOpen, onSetNavIsOpen }: NavProps) => {
       <nav className="flex flex-col">
         {landingPageLinks.map(({ name, path }) => (
           <HashLink
+            key={path}
             smooth
-            to={`#${path}`}
+            to={pathname === "/" ? `#${path}` : `/#${path}`}
             className={`${
               activePath == path
                 ? "bg-[#ececec] text-light_primary font-semibold"
                 : "text-gray-500"
             } p-5 text-[16px] font-medium`}
-            onClick={() => {
-              setActivePath(path);
-              onSetNavIsOpen();
-            }}
+            onClick={() => handleNavClick(path)}
           >
             {name}
           </HashLink>
