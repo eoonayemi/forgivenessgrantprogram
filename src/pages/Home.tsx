@@ -112,7 +112,7 @@ const Home = () => {
         imgAlt="About Us"
         buttonText="Learn More"
         btnHasArrow
-        hasButton
+        // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
         titleStyles="text-3xl font-bold text-black"
@@ -129,7 +129,7 @@ const Home = () => {
         imgAlt="Our Vision"
         buttonText="Learn More"
         btnHasArrow
-        hasButton
+        // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
         titleStyles="text-3xl font-bold text-black"
@@ -146,7 +146,7 @@ const Home = () => {
         imgAlt="Our Mission"
         buttonText="Learn More"
         btnHasArrow
-        hasButton
+        // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
         titleStyles="text-3xl font-bold text-black"
@@ -220,7 +220,7 @@ const Home = () => {
         ))}
       </section>
 
-      <SectionBox title="What Our Client Says" id="our-clients">
+      <SectionBox title="Testimonials" id="testimonials">
         <div className="flex items-center justify-center mt-20">
           <ActiveSlider />
         </div>
@@ -239,11 +239,11 @@ const Home = () => {
       </SectionBox>
 
       <section className="text-white bg-light_primary text-center py-5 text-sm md:text-lg font-bold">
-        <p>"Funding ambitions & empowering futures"</p>
+        <p>"Funding hopes, fueling dreams"</p>
       </section>
 
       <SectionBox
-        title="Contact With Us"
+        title="Contact Us"
         description="Feel free to get in touch with our team"
         id="contact-us"
         desStyles="w-[50%] text-gray-600 text-lg"

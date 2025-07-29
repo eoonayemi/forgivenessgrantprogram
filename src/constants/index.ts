@@ -114,21 +114,22 @@ export const clients = [
 
 export const reviews = [
   {
-    name: "John A.",
-    title: "Small Business Owner",
-    review:
-      "The Forgiveness Grant Program gave me the financial support I needed to launch my small bakery. With their help, I could finally turn my passion for baking into a thriving business. I'm forever grateful for the opportunity they provided me to follow my dreams without the stress of repayment.",
-    image: small_business_owner,
-  },
-  {
     name: "Maria F.",
     title: "Professional Baker",
     review:
-      "Our non-profit organization was struggling to fund a new program for underserved children. The grant from the Forgiveness Grant Program came at the perfect time, allowing us to expand our services and reach more kids. Their generosity has made a huge impact on our community, and we are deeply thankful.",
+      "The Forgiveness Grant Program gave me the financial support I needed to launch my small bakery. With their help, I could finally turn my passion for baking into a thriving business. I'm forever grateful for the opportunity they provided me to follow my dreams without the stress of repayment.",
+
     image: professional_baker,
   },
   {
-    name: "Karen K.",
+    name: "John A.",
+    title: "Non-profit Director",
+    review:
+      "Our non-profit organization was struggling to fund a new program for underserved children. The grant from the Forgiveness Grant Program came at the perfect time, allowing us to expand our services and reach more kids. Their generosity has made a huge impact on our community, and we are deeply thankful.",
+    image: small_business_owner,
+  },
+  {
+    name: "Aaliyah W.",
     title: "Entrepreneur",
     review:
       "I had a great business idea but lacked the capital to get started. The Forgiveness Grant Program believed in me when no one else did. With their funding, I was able to launch my online boutique, which has now grown beyond my expectations. I'm proud to say I'm running a successful business, all debt-free!",

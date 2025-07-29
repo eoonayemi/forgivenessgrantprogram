@@ -12,6 +12,10 @@
   @apply px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px] pt-20;
 }
 
+.swiper-pagination-bullet-active {
+  background-color: #042f2c !important;
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -23,6 +27,10 @@
 
 .animate-scroll {
   animation: scroll 5s linear infinite;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* Remove background highlight on input focus */

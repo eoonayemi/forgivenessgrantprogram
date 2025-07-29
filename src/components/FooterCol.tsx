@@ -13,6 +13,7 @@ interface FooterColProps {
 
 const FooterCol = ({ links, heading }: FooterColProps) => {
   const { activePath, setActivePath } = useAppContext();
+
   return (
     <div className="text-white text-sm">
       <h3 className="font-bold mb-3">{heading}</h3>
@@ -20,6 +21,7 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
         {links.map(({ name, path }, i) => (
           <HashLink
             key={i}
+            smooth
             to={`#${path}`}
             onClick={() => {
               setActivePath(path);
