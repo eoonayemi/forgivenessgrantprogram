@@ -389,7 +389,7 @@ export const contacts = [
   {
     Icon: ContactPhone,
     name: "Phone Number",
-    contact: "+1(913) 396-9280",
+    contact: "+1(913) 396-9230",
   },
   {
     Icon: Email,

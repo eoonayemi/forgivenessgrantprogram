@@ -183,7 +183,7 @@ const Home = () => {
 
       <SectionBox
         title="Our Services"
-        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
+        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours. Select your preferred grant below:"
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
         titleStyles="text-white"
@@ -237,7 +237,7 @@ const Home = () => {
                 text="Get Funded"
                 styles="rounded-lg px-6 bg-light_primary"
                 hasArrow
-                onClick={() => scrollToSection("contact-us")}
+                onClick={() => scrollToSection("our-services")}
               />
             </div>
           </div>
