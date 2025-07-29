@@ -75,7 +75,7 @@ const Home = () => {
             Fueling Dreams for Individuals & Businesses with Accessible Funding
           </h1>
           <p>
-            At ForgivenessGrant, we fund ambitions and empower futures by
+            At Forgiveness Grant, we fund ambitions and empower futures by
             offering non-repayment grants to support your goal in education,
             business or community projects without the burden of debt.
           </p>
@@ -110,7 +110,7 @@ const Home = () => {
         id="about-us"
         title="About Us"
         description={
-          "At ForgivenessGrant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, ForgivenessGrant is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
+          "At Forgiveness Grant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Forgiveness Grant is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
         }
         img={aboutUs}
         imgAlt="About Us"
@@ -127,7 +127,7 @@ const Home = () => {
         id="our-vision"
         title="Our Vision"
         description={
-          "At ForgivenessGrant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
+          "At Forgiveness Grant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
         }
         img={ourVision}
         imgAlt="Our Vision"
@@ -144,7 +144,7 @@ const Home = () => {
         id="our-mission"
         title="Our Mission"
         description={
-          "ForgivenessGrant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
+          "Forgiveness Grant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
         }
         img={ourMission}
         imgAlt="Our Mission"
