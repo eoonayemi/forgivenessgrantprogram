@@ -386,6 +386,6 @@ export const contacts = [
   {
     Icon: Email,
     name: "Send An Email",
-    contact: "info@grants4life.com",
+    contact: "info@forgivenessgrant.com",
   },
 ];

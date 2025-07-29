@@ -119,7 +119,7 @@ const Home = () => {
         // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
-        titleStyles="text-3xl font-bold text-black"
+        titleStyles="text-3xl font-bold text-light_primary"
         cardStyles="gap-10 md:gap-16 bg-white"
         desStyles="text-black"
       />
@@ -136,7 +136,7 @@ const Home = () => {
         // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
-        titleStyles="text-3xl font-bold text-black"
+        titleStyles="text-3xl font-bold text-light_primary"
         cardStyles="gap-10 md:gap-16 md:flex-row-reverse bg-white"
         desStyles="text-black"
       />
@@ -153,7 +153,7 @@ const Home = () => {
         // hasButton
         buttonStyles="w-[10rem] text-[14px]"
         imgStyles="w-full rounded-3xl"
-        titleStyles="text-3xl font-bold text-black"
+        titleStyles="text-3xl font-bold text-light_primary"
         cardStyles="gap-10 md:gap-16 bg-white"
         desStyles="text-black"
       />
