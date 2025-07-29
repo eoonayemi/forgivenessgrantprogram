@@ -42,7 +42,6 @@ const FieldInput = ({
             value={value}
             onChange={onChange}
             className={`${styles} bg-slate-100 placeholder:text-slate-400 p-4 h-14 w-full hover:bg-slate-100 focus:bg-slate-100 rounded-xl`}
-            required
           />
         </div>
       )}

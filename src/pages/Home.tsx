@@ -163,7 +163,7 @@ const Home = () => {
         description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
-        titleStyles="text-white"
+        titleStyles="text-light_primary"
         desStyles="text-white"
       >
         <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 items-center justify-center">
@@ -181,6 +181,7 @@ const Home = () => {
         title="Our Process"
         description="Getting the support you need is simple and straightforward. Our process is designed to be fast, transparent, and stress-free from application to approval. Follow the steps below to see how you can access your grant in just a few days. Each application is carefully reviewed to ensure fairness, clarity and prompt response."
         id="our-process"
+        titleStyles="text-light_primary"
         cardStyles="gap-20"
       >
         <div className="hidden w-full md:flex flex-row items-center justify-center gap-32 px-[180px]">
@@ -224,7 +225,11 @@ const Home = () => {
         ))}
       </section>
 
-      <SectionBox title="Testimonials" id="testimonials">
+      <SectionBox
+        title="Testimonials"
+        id="testimonials"
+        titleStyles="text-light_primary"
+      >
         <div className="flex items-center justify-center mt-20">
           <ActiveSlider />
         </div>
@@ -234,6 +239,7 @@ const Home = () => {
         title="Frequently Asked Questions (FAQs)"
         id="faqs"
         cardStyles="bg-dark_primary text-white"
+        titleStyles="text-light_primary"
       >
         <div className="mt-10 flex flex-col gap-[1px] rounded-2xl overflow-hidden">
           {faqs.map((faq, i) => (
@@ -253,7 +259,7 @@ const Home = () => {
         desStyles="w-[50%] text-gray-600 text-lg"
         tdStyles="gap-3"
         cardStyles="text-sm"
-        titleStyles="text-3xl sm:text-4xl md:text-4xl md:leading-[4rem] text-wrap w-[60%] sm:w-[40%] text-center overflow-hidden"
+        titleStyles="text-3xl sm:text-4xl md:text-4xl md:leading-[4rem] text-wrap w-[60%] sm:w-[40%] text-center overflow-hidden text-light_primary"
       >
         <div className="flex flex-col md:flex-row justify-center gap-20 md:gap-40 mt-20">
           <div className="space-y-5">
