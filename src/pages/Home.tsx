@@ -65,7 +65,7 @@ const Home = () => {
   };
 
   return (
-    <main className="mt-14 min-h-full text-[16px]">
+    <main className="mt-3 min-h-full text-[16px]">
       <section
         id="home"
         className="text-white h-fit gap-20 bg-dark_primary responsive-p text-center md:text-left flex flex-col md:flex-row justify-center items-center"
