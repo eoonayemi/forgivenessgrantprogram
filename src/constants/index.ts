@@ -9,6 +9,8 @@ import {
   Bank,
   Users,
   Stat,
+  ContactPhone,
+  Email,
 } from "../assets/icons";
 import {
   auto3d,
@@ -366,5 +368,18 @@ export const grantStats = [
     label: "Satisfaction Rate",
     value: "98%",
     Icon: Stat,
+  },
+];
+
+export const contacts = [
+  {
+    Icon: ContactPhone,
+    name: "Phone Number",
+    contact: "+1(913) 396-9280",
+  },
+  {
+    Icon: Email,
+    name: "Send An Email",
+    contact: "info@grants4life.com",
   },
 ];

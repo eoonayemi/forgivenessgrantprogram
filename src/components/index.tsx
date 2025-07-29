@@ -13,3 +13,5 @@ export { default as ProcessCard } from "./ProcessCard";
 export { default as StatCard } from "./StatCard";
 export { default as TestimonialSlider } from "./TestimonialSlider";
 export { default as ActiveSlider } from "./ActiveSlider";
+export { default as ContactCard } from "./ContactCard";
+export { default as FieldInput } from "./FieldInput";

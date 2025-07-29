@@ -20,3 +20,5 @@ export { FaHandsHoldingCircle as Grant } from "react-icons/fa6";
 export { RiBankFill as Bank } from "react-icons/ri";
 export { FaUsers as Users } from "react-icons/fa";
 export { BiStats as Stat } from "react-icons/bi";
+export { FaPhone as ContactPhone } from "react-icons/fa6";
+export { MdEmail as Email } from "react-icons/md";

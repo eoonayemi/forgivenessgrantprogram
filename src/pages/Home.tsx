@@ -1,9 +1,11 @@
 // import { useEffect, useState } from "react";
 import {
   ActiveSlider,
+  ContactCard,
   ContentImgCard,
   CustomButton,
   FAQCard,
+  FieldInput,
   ProcessCard,
   // ReviewCard,
   SectionBox,
@@ -11,6 +13,7 @@ import {
   StatCard,
 } from "../components";
 import {
+  contacts,
   // clients,
   faqs,
   grantProcess,
@@ -28,18 +31,30 @@ import { aboutUs, heroImg, ourMission, ourVision } from "../assets/images";
 //   Whatsapp,
 // } from "../assets/icons";
 import { useNavigate } from "react-router-dom";
+import { z } from "zod";
+import { useState } from "react";
+
+export const contactFormSchema = z.object({
+  name: z.string().min(1, "Username is required"),
+  email: z.string().email("Invalid email address"),
+  message: z.string().min(6, "Message is required"),
+});
+
+export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Home = () => {
   // const [activeReview, setActiveReview] = useState(0);
   const navigate = useNavigate();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveReview((prev) => (prev + 1) % clients.length);
-  //   }, 5000);
-
-  //   return () => clearInterval(interval);
-  // }, []);
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("Form submitted with:", form);
+  };
 
   return (
     <main className="mt-16 min-h-full text-[16px]">
@@ -227,42 +242,50 @@ const Home = () => {
         <p>"Funding ambitions & empowering futures"</p>
       </section>
 
-      {/* <SectionBox
-        title="Try MyAmtApp Today"
-        description="We offer instant recharge of airtime, databundle, cable TV subscriptions, Electricity bill payments and more."
-        id="try-now"
-        desStyles="w-[50%] text-gray-600"
+      <SectionBox
+        title="Contact With Us"
+        description="Feel free to get in touch with our team"
+        id="contact-us"
+        desStyles="w-[50%] text-gray-600 text-lg"
         tdStyles="gap-3"
         cardStyles="text-sm"
-        titleStyles="text-4xl sm:text-5xl md:text-5xl md:leading-[4rem] text-wrap w-[60%] sm:w-[40%] text-center overflow-hidden"
+        titleStyles="text-3xl sm:text-4xl md:text-4xl md:leading-[4rem] text-wrap w-[60%] sm:w-[40%] text-center overflow-hidden"
       >
-        <div className="flex flex-col justify-center items-center mt-5 gap-5">
-          <CustomButton
-            text="Get Started"
-            styles="w-[10rem] text-sm"
-            hasArrow
-            onClick={() => navigate("/register")}
-          />
-          <span className="text-gray-600">Email: myamtapp@info.com</span>
-          <div className="flex gap-5">
-            <span className=" bg-light_primary rounded-full p-2">
-              <Twitter className="text-white text-xs" />
-            </span>
-            <span className=" bg-light_primary rounded-full p-2">
-              <Facebook className="text-white text-xs" />{" "}
-            </span>
-            <span className=" bg-light_primary rounded-full p-2">
-              <Instagram className="text-white text-xs" />
-            </span>
-            <span className=" bg-light_primary rounded-full p-2">
-              <Telegram className="text-white text-xs" />
-            </span>
-            <span className=" bg-light_primary rounded-full p-2">
-              <Whatsapp className="text-white text-xs" />
-            </span>
+        <div className="flex flex-col md:flex-row justify-center gap-20 md:gap-40 mt-20">
+          <div className="space-y-5">
+            {contacts.map((contact, index) => (
+              <ContactCard key={index} {...contact} />
+            ))}
+          </div>
+          <div className="md:w-[40rem]">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-4 w-full"
+            >
+              <div className="flex flex-col md:flex-row gap-4 w-full">
+                <FieldInput
+                  placeholder="Your Name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                />
+                <FieldInput
+                  placeholder="Your Email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
+                />
+              </div>
+
+              <FieldInput
+                placeholder="Message"
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+                isTextArea
+              />
+              <CustomButton type="submit" text="Send A Message" />
+            </form>
           </div>
         </div>
-      </SectionBox> */}
+      </SectionBox>
 
       {/* <ArrowUpCircle className="absolute text-white text-4xl right-[3rem]" /> */}
     </main>
