@@ -41,6 +41,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useState } from "react";
+import { useAppContext } from "@/contexts/AppContext"; // Add this import
 
 export const contactFormSchema = z.object({
   name: z.string().min(1, "Username is required"),
@@ -53,11 +54,33 @@ export type ContactFormData = z.infer<typeof contactFormSchema>;
 const Home = () => {
   // const [activeReview, setActiveReview] = useState(0);
   const navigate = useNavigate();
+  const { setActivePath } = useAppContext(); // Add this line
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  // Add this function for programmatic scrolling
+  const scrollToSection = (sectionId: string, offset = 80) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      // Update the active path in context
+      setActivePath(sectionId);
+
+      // Update URL hash
+      navigate(`#${sectionId}`, { replace: true });
+
+      // Scroll to element with offset for fixed header
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -83,7 +106,7 @@ const Home = () => {
             text="Get Started"
             styles="w-[11rem]"
             hasArrow={true}
-            onClick={() => navigate("/eligibility-form")}
+            onClick={() => scrollToSection("our-process")}
           />
         </div>
         <div className="overflow-hidden rounded-[50%] w-full h-full sm:w-[20rem] sm:h-[20rem]  lg:w-[25rem] lg:h-[25rem] xl:w-[35rem] xl:h-[35rem]">
@@ -110,7 +133,7 @@ const Home = () => {
         id="about-us"
         title="About Us"
         description={
-          "At Forgiveness Grant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Forgiveness Grant is here to uplift those in need. Whether it’s funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
+          "At Forgiveness Grant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Forgiveness Grant is here to uplift those in need. Whether it's funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
         }
         img={aboutUs}
         imgAlt="About Us"
@@ -127,7 +150,7 @@ const Home = () => {
         id="our-vision"
         title="Our Vision"
         description={
-          "At Forgiveness Grant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
+          "At Forgiveness Grant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
         }
         img={ourVision}
         imgAlt="Our Vision"
@@ -144,7 +167,7 @@ const Home = () => {
         id="our-mission"
         title="Our Mission"
         description={
-          "Forgiveness Grant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
+          "Forgiveness Grant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
         }
         img={ourMission}
         imgAlt="Our Mission"
@@ -160,7 +183,7 @@ const Home = () => {
 
       <SectionBox
         title="Our Services"
-        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
+        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours."
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
         titleStyles="text-white"
@@ -179,7 +202,7 @@ const Home = () => {
 
       <SectionBox
         title="Our Process"
-        description="Getting the support you need is simple and straightforward. Our process is designed to be fast, transparent, and stress-free from application to approval. Follow the steps below to see how you can access your grant in just a few days. Each application is carefully reviewed to ensure fairness, clarity and prompt response."
+        description="Getting the support you need is simple and straightforward. Our process is designed to be fast, transparent, and stress-free from application to approval. Follow the steps below to see how you can access your grant in just a few days. Each application is carefully reviewed to ensure fairness, clarity and prompt response."
         id="our-process"
         titleStyles="text-light_primary"
         cardStyles="gap-20"
@@ -199,6 +222,7 @@ const Home = () => {
                 text="Get Funded"
                 styles="rounded-lg px-6 bg-light_primary"
                 hasArrow
+                onClick={() => scrollToSection("our-services")}
               />
             </div>
           </div>
@@ -213,6 +237,7 @@ const Home = () => {
                 text="Get Funded"
                 styles="rounded-lg px-6 bg-light_primary"
                 hasArrow
+                onClick={() => scrollToSection("contact-us")}
               />
             </div>
           </div>
@@ -225,7 +250,7 @@ const Home = () => {
         >
           Milestones
         </h1>
-        <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+        <div className="flex flex-col md:flex-row gap-10 items-center justify-center w-full">
           {grantStats.map((stat, i) => (
             <StatCard key={i} {...stat} />
           ))}

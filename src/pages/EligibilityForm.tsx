@@ -89,7 +89,7 @@ const EligibilityForm = () => {
       <SectionBox
         title="Fill Up Your Prequalification Questions"
         description="For Business Grant Applicants ONLY"
-        id="contact-us"
+        id="eligibility-form"
         desStyles="w-[50%] text-gray-600 text-lg"
         tdStyles="gap-3"
         cardStyles="text-sm xl:px-[250px] mt-20"
@@ -209,7 +209,7 @@ const EligibilityForm = () => {
               </div>
             )}
             <CustomButton
-              type="submit"
+              type={isEligible ? "button" : "submit"}
               Icon={Spinner}
               isLoading={isCheckingEligibility}
               text={
@@ -220,6 +220,11 @@ const EligibilityForm = () => {
                   : "Check Eligibility"
               }
               styles="h-[3rem] rounded-sm md:self-end font-bold px-10"
+              onClick={() => {
+                isEligible &&
+                  (window.location.href =
+                    "https://forms.gle/w4dgKSadhCLQB8ww6");
+              }}
             />
           </form>
         </div>

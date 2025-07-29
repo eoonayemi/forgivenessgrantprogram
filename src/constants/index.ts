@@ -235,36 +235,42 @@ export const services = [
     description:
       "Get the support you need for everyday life. The Forgiveness Grant Program offers personal grants to help individuals overcome financial barriers and move forward with confidence.",
     Icon: Phone,
+    link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
   {
     name: "Business Grants",
     description:
       "Whether you're launching a new venture or growing an existing one, our business grants are designed to fuel your ambition without the burden of repayment because progress deserves a helping hand.",
     Icon: Antenna,
+    link: "/eligibility-form",
   },
   {
     name: "Educational Grants",
     description:
       "Pursue your academic goals without worrying about tuition or fees. The Forgiveness Grant Program provides educational grants to help you invest in your future, debt-free.",
     Icon: Receipt,
+    link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
   {
     name: "Innovation Grants",
     description:
       "Have a bold idea or breakthrough project? We support creativity that drives change. Our innovative grants are here to help you turn vision into impact. We are ready to fund your dreams.",
     Icon: Modem,
+    link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
   {
     name: "Emergency Relief Grants",
     description:
       "In times of crisis, we stand with you. Our emergency relief grants offer fast, compassionate financial help when life takes an unexpected turn.",
     Icon: Id,
+    link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
   {
     name: "Community Grants",
     description:
       "Build stronger, brighter communities with our support. These grants are for initiatives that uplift neighborhoods, promote inclusion, and create lasting change because everyone deserves a chance to thrive.",
     Icon: Id,
+    link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
 ];
 
@@ -273,6 +279,7 @@ export const leftGrantProcess = [
     step: "First Step",
     process: "Check Eligibility",
     hasButton: true,
+    link: "eligibility-form",
     description:
       "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
   },
@@ -318,6 +325,7 @@ export const grantProcess = [
     step: "First Step",
     process: "Check Eligibility",
     hasButton: true,
+    link: "eligibility-form",
     description:
       "For Business Owners, review our eligibility criteria to ensure you qualify for a grant. Visit our eligibility page to see if you meet the requirements for our non-repayment grants.",
   },

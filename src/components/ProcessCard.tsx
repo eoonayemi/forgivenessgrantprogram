@@ -1,4 +1,5 @@
 import { ArrowRight } from "@/assets/icons";
+import { useNavigate } from "react-router";
 
 interface ProcessCardProps {
   step: string;
@@ -7,6 +8,7 @@ interface ProcessCardProps {
   cardStyles?: string;
   processStyles?: string;
   desStyles?: string;
+  link?: string;
   hasButton?: boolean;
 }
 
@@ -18,7 +20,10 @@ const ProcessCard = ({
   processStyles,
   desStyles,
   hasButton,
+  link,
 }: ProcessCardProps) => {
+  const navigate = useNavigate();
+
   return (
     <div
       className={`${cardStyles} h-fit flex flex-col text-left text-white gap-2 p-10 bg-dark_primary shadow-xl rounded-xl w-[20rem]`}
@@ -28,8 +33,11 @@ const ProcessCard = ({
       </h2>
       <h1 className={`${processStyles} font-bold`}>{process}</h1>
       <p className={`${desStyles}`}>{description}</p>
-      {hasButton && (
-        <button className="bg-light_primary text-white p-2 self-end mt-5 rounded-full">
+      {hasButton && link && (
+        <button
+          className="bg-light_primary text-white p-2 self-end mt-5 rounded-full"
+          onClick={() => navigate(link)}
+        >
           <ArrowRight className="text-lg font-extrabold" />
         </button>
       )}
