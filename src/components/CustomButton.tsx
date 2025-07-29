@@ -9,6 +9,7 @@ interface CustomButtonProps {
   onClick?: () => void;
   hasArrow?: boolean;
   Icon?: IconType;
+  isLoading?: boolean;
 }
 
 const CustomButton = ({
@@ -19,6 +20,7 @@ const CustomButton = ({
   hasArrow,
   type = "button",
   Icon,
+  isLoading,
 }: CustomButtonProps) => {
   return (
     <button
@@ -27,7 +29,7 @@ const CustomButton = ({
       onClick={onClick}
       type={type}
     >
-      {Icon && <Icon className="w-5 h-5" />}
+      {Icon && isLoading && <Icon className={`w-5 h-5 animate-spin`} />}
       {text} {hasArrow && <ArrowRight className="inline-block ml-1" />}
     </button>
   );

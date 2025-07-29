@@ -28,8 +28,8 @@ export const footerLinks = [
     heading: "Contact Us",
     links: [
       {
-        name: "info@forgivenessgrant.com",
-        path: "mailto:info@forgivenessgrant.com",
+        name: "info@forgivenessgrant.org",
+        path: "mailto:info@forgivenessgrant.org",
       },
     ],
   },
@@ -386,6 +386,6 @@ export const contacts = [
   {
     Icon: Email,
     name: "Send An Email",
-    contact: "info@forgivenessgrant.com",
+    contact: "info@forgivenessgrant.org",
   },
 ];
