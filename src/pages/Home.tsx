@@ -78,11 +78,11 @@ const Home = () => {
             onClick={() => navigate("/register")}
           />
         </div>
-        <div className="bg-secondary001 rounded-full overflow-hidden">
+        <div className="overflow-hidden">
           <img
             src={heroImg}
             alt="Hero Image"
-            className="w-[100rem] sm:w-[150rem] lg:w-[150rem] object-contain"
+            className="w-[60rem] h-[21rem] lg:w-[90rem] lg:h-[31.5rem] rounded-[50%]"
           />
         </div>
       </section>
@@ -239,7 +239,7 @@ const Home = () => {
       </SectionBox>
 
       <section className="text-white bg-light_primary text-center py-5 text-sm md:text-lg font-bold">
-        <p>"Funding hopes, fueling dreams"</p>
+        <p>"Funding hopes, Fueling dreams"</p>
       </section>
 
       <SectionBox
