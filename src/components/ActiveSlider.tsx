@@ -38,7 +38,7 @@ const ActiveSlider = () => {
             slidesPerView: 1,
             spaceBetween: 15,
           },
-          700: {
+          768: {
             slidesPerView: 2,
             spaceBetween: 15,
           },

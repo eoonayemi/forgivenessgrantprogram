@@ -156,7 +156,7 @@ export const faqs = [
   {
     question: "Is there an application fee?",
     answer:
-      "No, there is no fee to apply for a grant through the Forgiveness Grants Program. Our goal is to make the process as accessible as possible for all applicants.",
+      "To ensure commitment and streamline processing, a one-time application fee of $300 is required. However, if your application is not approved, this fee will be fully refunded making it a risk-free step towards securing your grant through the Forgiveness Grants Program.",
   },
   {
     question: "What types of projects or initiatives do you fund?",
