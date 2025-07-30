@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import {
   ActiveSlider,
   ContactCard,
@@ -7,14 +6,12 @@ import {
   FAQCard,
   FieldInput,
   ProcessCard,
-  // ReviewCard,
   SectionBox,
   ServiceCard,
   StatCard,
 } from "../components";
 import {
   contacts,
-  // clients,
   faqs,
   grantProcess,
   grantStats,
@@ -22,22 +19,7 @@ import {
   rightGrantProcess,
   services,
 } from "../constants";
-import {
-  aboutUs,
-  // heroImg,
-  // heroImg2,
-  // heroImg3,
-  heroImg4,
-  ourMission,
-  ourVision,
-} from "../assets/images";
-// import {
-//   Facebook,
-//   Instagram,
-//   Telegram,
-//   Twitter,
-//   Whatsapp,
-// } from "../assets/icons";
+import { aboutUs, heroImg4, ourMission, ourVision } from "../assets/images";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 import { useRef, useState } from "react";
@@ -53,7 +35,6 @@ export const contactFormSchema = z.object({
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 
 const Home = () => {
-  // const [activeReview, setActiveReview] = useState(0);
   const navigate = useNavigate();
   const { setActivePath } = useAppContext(); // Add this line
   const [form, setForm] = useState({
@@ -64,6 +45,7 @@ const Home = () => {
   const errorMessageRef = useRef<HTMLDivElement>(null);
   const [showValidationError, setShowValidationError] = useState(false);
   const [error, setError] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Add this function for programmatic scrolling
   const scrollToSection = (sectionId: string, offset = 80) => {
@@ -91,6 +73,8 @@ const Home = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    setIsSubmitting(true);
+
     // Use safeParse to avoid throwing errors
     const validation = contactFormSchema.safeParse(form);
 
@@ -112,6 +96,7 @@ const Home = () => {
           });
         }
       }, 100);
+      setIsSubmitting(false);
       return;
     }
 
@@ -143,9 +128,11 @@ const Home = () => {
 
       // Reset form
       setForm({ name: "", email: "", message: "" });
+      setIsSubmitting(false);
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to send message. Please try again.");
+      setIsSubmitting(false);
     }
   };
 
@@ -160,7 +147,7 @@ const Home = () => {
             Fueling Dreams for Individuals & Businesses with Accessible Funding
           </h1>
           <p>
-            At Forgiveness Grant, we fund ambitions and empower futures by
+            At Forgiveness Grants, we fund ambitions and empower futures by
             offering non-repayment grants to support your goal in education,
             business or community projects without the burden of debt.
           </p>
@@ -179,23 +166,11 @@ const Home = () => {
         <p>"Funding ambitions & empowering futures"</p>
       </section>
 
-      {/* <SectionBox title="Features" id="features">
-        <div className="w-full flex flex-col sm:flex-row flex-wrap gap-10 mt-10 items-center justify-center">
-          {features.map((feature, index) => (
-            <FeatureCard
-              key={index}
-              {...feature}
-              cardStyles="md:w-[31.1%] sm:w-[46.8%] bg-[#f5f5f5]"
-            />
-          ))}
-        </div>
-      </SectionBox> */}
-
       <ContentImgCard
         id="about-us"
         title="About Us"
         description={
-          "At Forgiveness Grant, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Forgiveness Grant is here to uplift those in need. Whether it's funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
+          "At Forgiveness Grants, we offer non-repayment grants that support education, business, and innovation. Our mission is to remove financial barriers so individuals can follow their dreams—debt-free. Rooted in compassion and opportunity, Forgiveness Grants is here to uplift those in need. Whether it's funding school, starting a business, or driving community impact, our goal is to help people succeed and thrive."
         }
         img={aboutUs}
         imgAlt="About Us"
@@ -212,7 +187,7 @@ const Home = () => {
         id="our-vision"
         title="Our Vision"
         description={
-          "At Forgiveness Grant, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
+          "At Forgiveness Grants, our vision is a world where financial barriers never limit personal or community growth. We aim to lead in providing accessible, non-repayable support that fuels innovation, promotes education, and empowers people to reach their full potential and create lasting impact."
         }
         img={ourVision}
         imgAlt="Our Vision"
@@ -229,7 +204,7 @@ const Home = () => {
         id="our-mission"
         title="Our Mission"
         description={
-          "Forgiveness Grant is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
+          "Forgiveness Grants is dedicated to empowering people and communities through non-repayable grants that eliminate financial obstacles and unlock opportunities for growth, innovation, and success. We support education, entrepreneurship, and community initiatives to help build a fairer future where everyone can thrive debt-free."
         }
         img={ourMission}
         imgAlt="Our Mission"
@@ -245,7 +220,7 @@ const Home = () => {
 
       <SectionBox
         title="Our Services"
-        description="The Forgiveness Grant Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours. Select your preferred grant below:"
+        description="The Forgiveness Grants Program offers a variety of non-repayable grants to support individuals, businesses, and communities. Whether you need help with personal needs, education, or innovation, we are here to assist. All approved grants are disbursed within 72 hours. Select your preferred grant below:"
         id="our-services"
         cardStyles="gap-20 bg-dark_primary"
         titleStyles="text-white"
@@ -401,8 +376,6 @@ const Home = () => {
           </div>
         </div>
       </SectionBox>
-
-      {/* <ArrowUpCircle className="absolute text-white text-4xl right-[3rem]" /> */}
     </main>
   );
 };

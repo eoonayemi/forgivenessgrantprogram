@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <p>© 2023 Forgiveness Grant Program</p>
+      <p>© 2023 Forgiveness Grants Program</p>
     </footer>
   );
 };

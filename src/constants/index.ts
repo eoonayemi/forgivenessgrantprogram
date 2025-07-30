@@ -45,24 +45,6 @@ export const footerLinks = [
       { name: "Contact Us", path: "contact-us" },
     ],
   },
-  // {
-  //   heading: "Services",
-  //   links: [
-  //     { name: "Airtime Top-Up", path: "/services/airtime-topup" },
-  //     { name: "Data Subscription", path: "/services/data-subscription" },
-  //     { name: "Bill Payment", path: "/services/bill-payment" },
-  //     { name: "Verifications", path: "/services/verifications" },
-  //   ],
-  // },
-  // {
-  //   heading: "Follow Us",
-  //   links: [
-  //     { name: "Facebook", path: "https://facebook.com/MyAmtApp" },
-  //     { name: "Twitter", path: "https://twitter.com/MyAmtApp" },
-  //     { name: "Instagram", path: "https://instagram.com/MyAmtApp" },
-  //     { name: "LinkedIn", path: "https://linkedin.com/company/MyAmtApp" },
-  //   ],
-  // },
 ];
 
 export const landingPageLinks = [
@@ -121,7 +103,7 @@ export const reviews = [
     name: "Maria F.",
     title: "Professional Baker",
     review:
-      "The Forgiveness Grant Program gave me the financial support I needed to launch my small bakery. With their help, I could finally turn my passion for baking into a thriving business. I'm forever grateful for the opportunity they provided me to follow my dreams without the stress of repayment.",
+      "The Forgiveness Grants Program gave me the financial support I needed to launch my small bakery. With their help, I could finally turn my passion for baking into a thriving business. I'm forever grateful for the opportunity they provided me to follow my dreams without the stress of repayment.",
 
     image: professional_baker,
   },
@@ -129,37 +111,37 @@ export const reviews = [
     name: "John A.",
     title: "Non-profit Director",
     review:
-      "Our non-profit organization was struggling to fund a new program for underserved children. The grant from the Forgiveness Grant Program came at the perfect time, allowing us to expand our services and reach more kids. Their generosity has made a huge impact on our community, and we are deeply thankful.",
+      "Our non-profit organization was struggling to fund a new program for underserved children. The grant from the Forgiveness Grants Program came at the perfect time, allowing us to expand our services and reach more kids. Their generosity has made a huge impact on our community, and we are deeply thankful.",
     image: small_business_owner,
   },
   {
     name: "Aaliyah W.",
     title: "Entrepreneur",
     review:
-      "I had a great business idea but lacked the capital to get started. The Forgiveness Grant Program believed in me when no one else did. With their funding, I was able to launch my online boutique, which has now grown beyond my expectations. I'm proud to say I'm running a successful business, all debt-free!",
+      "I had a great business idea but lacked the capital to get started. The Forgiveness Grants Program believed in me when no one else did. With their funding, I was able to launch my online boutique, which has now grown beyond my expectations. I'm proud to say I'm running a successful business, all debt-free!",
     image: entrepreneur,
   },
   {
     name: "Maria S.",
     title: "College Graduate",
     review:
-      "As a first-generation college student, I was worried about how I would afford my education. The non-repayment grant I received allowed me to focus on my studies instead of worrying about student loans. Today, I'm a proud graduate and the first in my family to earn a degree, all thanks to the Forgiveness Grant Program.",
+      "As a first-generation college student, I was worried about how I would afford my education. The non-repayment grant I received allowed me to focus on my studies instead of worrying about student loans. Today, I'm a proud graduate and the first in my family to earn a degree, all thanks to the Forgiveness Grants Program.",
     image: college_graduate,
   },
   {
     name: "Maxwell J.",
     title: "Community Leader",
     review:
-      "Our community was in desperate need of a youth center, but we didn't have the funds to build one. The grant we received from the Forgiveness Grant Program made our dream a reality. The center is now a safe space for young people to learn, grow, and thrive. We couldn't have done it without their support!",
+      "Our community was in desperate need of a youth center, but we didn't have the funds to build one. The grant we received from the Forgiveness Grants Program made our dream a reality. The center is now a safe space for young people to learn, grow, and thrive. We couldn't have done it without their support!",
     image: community_leader,
   },
 ];
 
 export const faqs = [
   {
-    question: "What is the Forgiveness Grant Program?",
+    question: "What is the Forgiveness Grants Program?",
     answer:
-      "The Forgiveness Grant Program is a non-repayment grant agency dedicated to providing financial support to individuals, small businesses, non-profits, and community projects. Our grants are designed to help recipients achieve their goals without the burden of debt.",
+      "The Forgiveness Grants Program is a non-repayment grant agency dedicated to providing financial support to individuals, small businesses, non-profits, and community projects. Our grants are designed to help recipients achieve their goals without the burden of debt.",
   },
   {
     question: "Who is eligible to apply for a grant?",
@@ -174,7 +156,7 @@ export const faqs = [
   {
     question: "Is there an application fee?",
     answer:
-      "No, there is no fee to apply for a grant through the Forgiveness Grant Program. Our goal is to make the process as accessible as possible for all applicants.",
+      "No, there is no fee to apply for a grant through the Forgiveness Grants Program. Our goal is to make the process as accessible as possible for all applicants.",
   },
   {
     question: "What types of projects or initiatives do you fund?",
@@ -204,12 +186,6 @@ export const faqs = [
 ];
 
 export const features = [
-  // {
-  //   name: "Secured",
-  //   description:
-  //     "Advanced security protocols protect your transactions, ensuring that your data and payments are safeguarded from unauthorized access.",
-  //   image: secure3d,
-  // },
   {
     name: "Client Focused",
     description:
@@ -234,7 +210,7 @@ export const services = [
   {
     name: "Personal Grants",
     description:
-      "Get the support you need for everyday life. The Forgiveness Grant Program offers personal grants to help individuals overcome financial barriers and move forward with confidence.",
+      "Get the support you need for everyday life. The Forgiveness Grants Program offers personal grants to help individuals overcome financial barriers and move forward with confidence.",
     Icon: Phone,
     link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },
@@ -248,7 +224,7 @@ export const services = [
   {
     name: "Educational Grants",
     description:
-      "Pursue your academic goals without worrying about tuition or fees. The Forgiveness Grant Program provides educational grants to help you invest in your future, debt-free.",
+      "Pursue your academic goals without worrying about tuition or fees. The Forgiveness Grants Program provides educational grants to help you invest in your future, debt-free.",
     Icon: Receipt,
     link: "https://forms.gle/w4dgKSadhCLQB8ww6",
   },

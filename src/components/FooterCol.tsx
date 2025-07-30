@@ -39,7 +39,7 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
       <h3 className="font-bold mb-3">{heading}</h3>
       <div className="flex flex-col gap-3 text-xs">
         {links.map(({ name, path, isExLink }, i) => (
-          <>
+          <div key={i}>
             {" "}
             {isExLink ? (
               <HashLink
@@ -65,7 +65,7 @@ const FooterCol = ({ links, heading }: FooterColProps) => {
                 {name}
               </HashLink>
             )}
-          </>
+          </div>
         ))}
       </div>
     </div>

@@ -26,7 +26,7 @@ const Layout = () => {
 
       <Outlet />
       <footer className="flex flex-col bg-dark_primary footer-res-p">
-        <div className="flex items-center justify-center overflow-hidden h-[150px] mb-10">
+        <div className="flex items-center justify-center overflow-hidden h-[150px]">
           <Logo imgStyles="h-[65px] w-[65px]" />
         </div>
 

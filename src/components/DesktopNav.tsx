@@ -8,8 +8,6 @@ const DesktopNav = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  console.log(pathname);
-
   const handleNavClick = (path: string) => {
     setActivePath(path);
 

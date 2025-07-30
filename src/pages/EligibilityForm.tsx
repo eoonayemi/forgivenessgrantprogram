@@ -1,10 +1,8 @@
 import { Check, Spinner } from "@/assets/icons";
 import { CustomButton, FieldInput, SectionBox } from "@/components";
 import { useState, useRef } from "react";
-// import { useNavigate } from "react-router";
 
 const EligibilityForm = () => {
-  //   const navigate = useNavigate();
   const errorMessageRef = useRef<HTMLDivElement>(null);
   const [form, setForm] = useState({
     name: "",
@@ -203,7 +201,7 @@ const EligibilityForm = () => {
               styles="h-[3rem] rounded-sm bg-slate-200 hover:bg-slate-200 focus:bg-slate-200 laceholder:text-slate-500"
             />
             {isEligible && (
-              <div className="text-light_primary flex gap-2 items-center max-sm:justify-center md:self-end font-semibold w-full">
+              <div className="text-light_primary flex gap-2 items-center justify-center md:justify-end font-semibold w-full">
                 <span>Congrats! You're eligible for the grant</span>
                 <Check className="text-lg" />
               </div>
