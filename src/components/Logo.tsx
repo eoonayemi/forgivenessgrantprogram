@@ -1,29 +1,19 @@
-import { blueLogo, whiteLogo } from "../assets/logos";
+import { forgiveness_logo1, forgiveness_logo2 } from "../assets/logos";
 
 interface LogoProps {
-  isWhite: boolean;
+  isWhite?: boolean;
   boxStyles?: string;
   imgStyles?: string;
-  textStyles?: string;
 }
 
-const Logo = ({ isWhite, boxStyles, imgStyles, textStyles }: LogoProps) => {
+const Logo = ({ isWhite, boxStyles, imgStyles }: LogoProps) => {
   return (
-    <div
-      className={`${boxStyles} flex justify-center items-center w-fit gap-1`}
-    >
+    <div className={`${boxStyles}`}>
       <img
-        src={isWhite ? whiteLogo : blueLogo}
+        src={isWhite ? forgiveness_logo1 : forgiveness_logo2}
         alt="logo"
-        className={`${imgStyles} h-5`}
+        className={`${imgStyles} h-[11rem]`}
       />
-      <span
-        className={`${textStyles} font-bold tracking-widest  ${
-          isWhite ? "text-white" : "text-light_primary"
-        }`}
-      >
-        Forgiveness Grant
-      </span>
     </div>
   );
 };

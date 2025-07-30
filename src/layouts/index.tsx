@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <>
       <header className="bg-dark_primary fixed top-0 inset-x-0 z-50 h-16 flex justify-between items-center px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px] overflow-hidden">
-        <Logo isWhite={true} />
+        <Logo isWhite />
         <div className="flex gap-3 items-center">
           <DesktopNav />
           <Menu
@@ -25,8 +25,12 @@ const Layout = () => {
       />
 
       <Outlet />
-      <footer className="bg-dark_primary footer-res-p">
-        <div className="flex flex-row md:gap-40 gap-20 max-md:justify-center overflow-hidden flex-wrap">
+      <footer className="flex flex-col bg-dark_primary footer-res-p">
+        <div className="flex items-center justify-center">
+          <Logo isWhite imgStyles="" />
+        </div>
+
+        <div className="flex flex-row md:gap-40 gap-20 justify-center overflow-hidden flex-wrap">
           {footerLinks.map((link, i) => (
             <FooterCol key={i} {...link} />
           ))}
@@ -34,14 +38,17 @@ const Layout = () => {
 
         <div className="bg-white w-full h-[0.005rem] mt-20"></div>
 
-        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-center gap-10 py-10">
+        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-center gap-10">
           <span className="flex gap-4">
             <span className="flex items-center justify-center gap-2">
-              <Copyright className="" />
-              <p>Copyright</p>
+              <span className="flex items-center justify-center">
+                {" "}
+                <Copyright className="text-[12px] mt-0.5" />
+                <p>Copyright</p>
+              </span>
               <span>{new Date().getFullYear()}</span>
             </span>
-            <Logo imgStyles="w-5 h-[12px]" isWhite />
+            <Logo imgStyles="-ml-[45px] h-[12rem]  mt-[5px]" />
           </span>
         </div>
       </footer>

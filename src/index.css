@@ -9,7 +9,7 @@
 }
 
 .footer-res-p {
-  @apply px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px] pt-20;
+  @apply px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px];
 }
 
 .swiper-pagination-bullet-active {
