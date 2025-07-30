@@ -25,6 +25,7 @@ import { z } from "zod";
 import { useRef, useState } from "react";
 import { useAppContext } from "@/contexts/AppContext";
 import emailjs from "@emailjs/browser";
+import { Check, Spinner } from "@/assets/icons";
 
 export const contactFormSchema = z.object({
   name: z.string().min(1, "Your Name is required"),
@@ -46,6 +47,7 @@ const Home = () => {
   const [showValidationError, setShowValidationError] = useState(false);
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   // Add this function for programmatic scrolling
   const scrollToSection = (sectionId: string, offset = 80) => {
@@ -116,19 +118,16 @@ const Home = () => {
       };
 
       // Send email
-      const result = await emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        publicKey
-      );
-
-      console.log("Email sent:", result);
-      alert("Message sent successfully! We'll get back to you soon.");
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
       // Reset form
       setForm({ name: "", email: "", message: "" });
+
+      setIsSuccess(true);
+
       setIsSubmitting(false);
+
+      setTimeout(() => setIsSuccess(false), 10000);
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to send message. Please try again.");
@@ -371,10 +370,22 @@ const Home = () => {
                 isTextArea
                 required={true}
               />
+
+              {isSuccess && (
+                <div className="text-light_primary flex gap-2 items-center justify-center md:justify-end font-semibold w-full">
+                  <span>
+                    Message sent successfully! We'll get back to you soon.
+                  </span>
+                  <Check className="text-lg" />
+                </div>
+              )}
               <CustomButton
+                Icon={Spinner}
                 type="submit"
+                styles="md:self-end font-bold px-10"
                 text="Send A Message"
                 disabled={isSubmitting}
+                isLoading={isSubmitting}
               />
             </form>
           </div>
