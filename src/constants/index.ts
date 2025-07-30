@@ -181,7 +181,7 @@ export const faqs = [
   {
     question: "How is the funding disbursed if my application is approved?",
     answer:
-      "Once your application is approved and all agreements are signed, the funds will be disbursed according to the terms of the grant. This process typically takes about 2 weeks from the approval date.",
+      "Once your application is approved and all agreements are signed, the funds will be disbursed according to the terms of the grant on that same day.",
   },
 ];
 
