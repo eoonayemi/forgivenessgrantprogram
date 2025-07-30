@@ -379,13 +379,13 @@ const Home = () => {
                   placeholder="Your Name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  // required={true}
+                  required={true}
                 />
                 <FieldInput
                   placeholder="Your Email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  // required={true}
+                  required={true}
                 />
               </div>
 
@@ -394,7 +394,7 @@ const Home = () => {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 isTextArea
-                // required={true}
+                required={true}
               />
               <CustomButton type="submit" text="Send A Message" />
             </form>
