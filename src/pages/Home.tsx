@@ -371,7 +371,11 @@ const Home = () => {
                 isTextArea
                 required={true}
               />
-              <CustomButton type="submit" text="Send A Message" />
+              <CustomButton
+                type="submit"
+                text="Send A Message"
+                disabled={isSubmitting}
+              />
             </form>
           </div>
         </div>
