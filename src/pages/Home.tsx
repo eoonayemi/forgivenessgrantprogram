@@ -127,7 +127,7 @@ const Home = () => {
         USER_EMAIL: validation.data.email,
         USER_MESSAGE: validation.data.message,
         TIMESTAMP: new Date().toLocaleString(),
-        to_email: "eoonayemi@gmail.com",
+        to_email: "forgivenessgrants@gmail.com",
       };
 
       // Send email
