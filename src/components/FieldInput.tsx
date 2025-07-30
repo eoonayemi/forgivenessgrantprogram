@@ -8,6 +8,7 @@ interface FieldInputProps {
   styles?: string;
   type?: string;
   isTextArea?: boolean;
+  required?: boolean;
 }
 
 const FieldInput = ({
@@ -17,6 +18,7 @@ const FieldInput = ({
   label,
   styles,
   isTextArea,
+  required,
 }: FieldInputProps) => {
   return (
     <>
@@ -26,7 +28,7 @@ const FieldInput = ({
           value={value}
           onChange={onChange}
           className={`${styles} bg-slate-100 placeholder:text-slate-400 p-4 h-60 w-full hover:bg-slate-100 focus:bg-slate-100 outline-none rounded-xl`}
-          required
+          required={required}
         ></textarea>
       ) : (
         <div className="flex flex-col gap-3 w-full">
@@ -41,6 +43,7 @@ const FieldInput = ({
             placeholder={placeholder}
             value={value}
             onChange={onChange}
+            required={required}
             className={`${styles} bg-slate-100 placeholder:text-slate-400 p-4 h-14 w-full hover:bg-slate-100 focus:bg-slate-100 rounded-xl`}
           />
         </div>

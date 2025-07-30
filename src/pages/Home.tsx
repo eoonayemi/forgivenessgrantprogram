@@ -40,13 +40,13 @@ import {
 // } from "../assets/icons";
 import { useNavigate } from "react-router-dom";
 import { z } from "zod";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useAppContext } from "@/contexts/AppContext";
 import emailjs from "@emailjs/browser";
 
 export const contactFormSchema = z.object({
-  name: z.string().min(1, "Username is required"),
-  email: z.string().email("Invalid email address"),
+  name: z.string().min(1, "Your Name is required"),
+  email: z.email("Invalid email address"),
   message: z.string().min(6, "Message is required"),
 });
 
@@ -61,6 +61,9 @@ const Home = () => {
     email: "",
     message: "",
   });
+  const errorMessageRef = useRef<HTMLDivElement>(null);
+  const [showValidationError, setShowValidationError] = useState(false);
+  const [error, setError] = useState("");
 
   // Add this function for programmatic scrolling
   const scrollToSection = (sectionId: string, offset = 80) => {
@@ -92,10 +95,23 @@ const Home = () => {
     const validation = contactFormSchema.safeParse(form);
 
     if (!validation.success) {
-      // Simple validation error message
       const firstError =
         validation.error.issues[0]?.message || "Please check your input";
-      alert(firstError);
+      setError(firstError);
+
+      setShowValidationError(true);
+      // Simple validation error message
+
+      // Smooth scroll to the error message with a slight delay to ensure it's rendered
+      setTimeout(() => {
+        if (errorMessageRef.current) {
+          errorMessageRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+          });
+        }
+      }, 100);
       return;
     }
 
@@ -350,16 +366,26 @@ const Home = () => {
               onSubmit={handleSubmit}
               className="flex flex-col gap-4 w-full"
             >
+              {showValidationError && (
+                <div
+                  ref={errorMessageRef}
+                  className="bg-red-600 bg-opacity-15 text-red-600 p-3 rounded-sm text-center font-semibold animate-pulse"
+                >
+                  {error}
+                </div>
+              )}
               <div className="flex flex-col md:flex-row gap-4 w-full">
                 <FieldInput
                   placeholder="Your Name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  // required={true}
                 />
                 <FieldInput
                   placeholder="Your Email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
+                  // required={true}
                 />
               </div>
 
@@ -368,6 +394,7 @@ const Home = () => {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 isTextArea
+                // required={true}
               />
               <CustomButton type="submit" text="Send A Message" />
             </form>
