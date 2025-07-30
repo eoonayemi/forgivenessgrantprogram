@@ -1,6 +1,6 @@
 import { Outlet } from "react-router";
 import { DesktopNav, FooterCol, Logo, MobileNav } from "../components";
-import { Copyright, Menu } from "../assets/icons";
+import { Menu } from "../assets/icons";
 import { useState } from "react";
 import { footerLinks } from "../constants";
 
@@ -10,7 +10,7 @@ const Layout = () => {
   return (
     <>
       <header className="bg-dark_primary fixed top-0 inset-x-0 z-50 h-16 flex justify-between items-center px-[16px] sm:px-[20px] md:px-[32px] xl:px-[120px] overflow-hidden">
-        <Logo isWhite />
+        <Logo imgStyles="h-[65px] w-[65px]" />
         <div className="flex gap-3 items-center">
           <DesktopNav />
           <Menu
@@ -26,8 +26,8 @@ const Layout = () => {
 
       <Outlet />
       <footer className="flex flex-col bg-dark_primary footer-res-p">
-        <div className="flex items-center justify-center">
-          <Logo isWhite imgStyles="" />
+        <div className="flex items-center justify-center overflow-hidden h-[150px] mb-10">
+          <Logo imgStyles="h-[65px] w-[65px]" />
         </div>
 
         <div className="flex flex-row md:gap-40 gap-20 justify-center overflow-hidden flex-wrap">
@@ -38,17 +38,14 @@ const Layout = () => {
 
         <div className="bg-white w-full h-[0.005rem] mt-20"></div>
 
-        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-center gap-10">
-          <span className="flex gap-4">
-            <span className="flex items-center justify-center gap-2">
-              <span className="flex items-center justify-center">
-                {" "}
-                <Copyright className="text-[12px] mt-0.5" />
-                <p>Copyright</p>
-              </span>
-              <span>{new Date().getFullYear()}</span>
-            </span>
-            <Logo imgStyles="-ml-[45px] h-[12rem]  mt-[5px]" />
+        <div className="text-white text-xs flex flex-col md:flex-row items-center justify-center gap-10 overflow-hidden h-[100px]">
+          <span className="flex items-center justify-center">
+            <span>© copyright {new Date().getFullYear()}</span>
+            <Logo
+              imgStyles="h-[40px] w-[40px]"
+              textStyles="leading-[11px] text-[10px]"
+              boxStyles="-space-x-1"
+            />
           </span>
         </div>
       </footer>
